@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KG - UX Designer</title>
+    <!-- Link to the new CSS file for index page styles -->
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <!-- Import the Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top navigation bar -->
+    <nav class="top-nav">
+        <!-- Left side of the navigation (logo) -->
+        <div class="nav-left">
+            <!-- Logo linking to the home page -->
+            <a href="index.html" class="logo" aria-label="Home">
+                <img src="images/logo.png" alt="KG Logo" loading="lazy">
+            </a>
+        </div>
+
+        <!-- Right side of the navigation (menu items) -->
+        <div class="nav-right">
+            <!-- Internal link to the Work section, marked as active -->
+            <a href="#" class="nav-link active" data-section="work">Work</a>
+            <!-- Internal link to the Info section -->
+            <!-- <a href="#" class="nav-link">Info</a> -->
+
+            <!-- External link to Credly profile -->
+            <a href="https://www.credly.com/users/kulan-gunawardena" target="_blank" class="external-link">
+                Credentials
+                <!-- SVG icon for external link -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+
+            <!-- External link to LinkedIn profile -->
+            <a href="https://www.linkedin.com/in/kulan-gun/" target="_blank" class="external-link">
+                LinkedIn
+                <!-- SVG icon for external link -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+            <!-- External link to CV/resume -->
+            <a href="https://drive.google.com/file/d/17QShIBAtSto6B0kB_7BqCihuv_0XRVEA/view?usp=sharing" target="_blank" class="external-link">
+                CV
+                <!-- SVG icon for external link -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <main>
+
+        <div class="hero">
+            <h1>Hi, I'm <span class="highlight">Kulan</span> <span class="wave">👋🏽</span></h1>
+            <p>I'm <span id="typing-animation"></span></p>
+        </div> 
+
+        <!-- Work section, marked as active -->
+        <section id="work" class="active">
+            <p class="caption">EXPERIENCE</p>
+            <h2 class="selected-work-heading">My Work</h2>
+            <!-- Container for case study cards -->
+            <div class="case-studies">
+
+                <!-- Case Study 1 -->
+                <a href="case-study.html" class="case-study-card" data-case-study="case-study.html">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-text">
+                                <p class="card-prefix">01 | CONFIDENTIAL CLIENT</p>
+                                <h2 class="card-title">Designing contactless migration</h2>
+                                <!-- <p class="card-subtitle">
+                                    <span class="company">Home Office</span>, 
+                                    <span class="year">'24</span> — 
+                                    <span class="description">Designing the future of contactless migration.</span>
+                                </p> -->
+                            </div>
+                            <!-- Arrow icon -->
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </div>
+                        <div class="card-image">
+                            <img src="images/airport.png" alt="Fingerprint Scanning App">
+                        </div>
+                    </div>
+                </a>
+        
+                <!-- Case Study 2 -->
+                <a href="case-study2.html" class="case-study-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-text">
+                                <p class="card-prefix">02 | DEPARTMENT FOR WORK & PENSIONS (DWP)</p>
+                                <h2 class="card-title">Helping citizens get their benefits faster</h2>
+                                <!-- <p class="card-subtitle">
+                                    <span class="company">DWP</span>, 
+                                    <span class="year">'24</span> — 
+                                    <span class="description">Revolutionising personal health management.</span>
+                                </p> -->
+                            </div>
+                            <!-- Arrow icon -->
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </div>
+                        <div class="card-image"> 
+                            <img src="images/dwp-work1.png" alt="AI Health Assistant Interface">
+                        </div>
+                    </div>
+                </a>
+        
+                <!-- Case Study 3 -->
+                <!-- <a href="case-study3.html" class="case-study-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-text">
+                                <p class="card-prefix">03 | CAPGEMINI INVENT</p>
+                                <h2 class="card-title">Driving AI-empowered change</h2>
+                            </div>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </div>
+                        <div class="card-image2">
+                            <img src="images/aura-ipad.png" alt="AI Dashboard">
+                        </div>
+                    </div>
+                </a> -->
+
+                 <!-- Case Study 3 (Coming Soon) -->
+                 <div class="case-study-card coming-soon">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-text">
+                                <p class="card-prefix">03 | CAPGEMINI INVENT</p>
+                                <h2 class="card-title">Driving AI-empowered change</h2>
+                            </div>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </div>
+                        <div class="card-image2">
+                            <img src="images/aura-ipad.png" alt="AI Dashboard">
+                        </div>
+                    </div>
+                    <div class="coming-soon-overlay">
+                        <span>Coming Soon</span>
+                    </div>
+                </div>
+        
+
+                   <!-- Case Study 4 (Coming Soon) -->
+                   <div class="case-study-card coming-soon">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-text">
+                                <p class="card-prefix">04 | ANGLIAN WATER</p>
+                                <h2 class="card-title">Modernising a payment tracking platform</h2>
+                            </div>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </div>
+                        <div class="card-image2">
+                            <img src="images/anglian.png" alt="Sustainable Smart Home Dashboard">
+                        </div>
+                    </div>
+                    <div class="coming-soon-overlay">
+                        <span>Coming Soon</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- Info section (empty for now) -->
+        <section id="info">
+            <!-- Info content will go here -->
+        </section>
+    </main>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+
+    <!-- Add this at the end of your body tag, just before the closing </body> -->
+    
+    <footer class="footer">
+        <div class="divider"></div>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>MAIN</h3>
+            <nav>
+              <a href="#work">Work</a>
+              <a href="https://www.credly.com/users/kulan-gunawardena" target="_blank" class="external-link">
+                Credentials
+                <!-- SVG icon for external link -->
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+              <!-- <a href="#info">Info</a> -->
+            </nav>
+          </div>
+          <div class="footer-section">
+            <h3>CONTACT</h3>
+            <nav>
+              <a href="https://www.linkedin.com/in/kulan-gun/" target="_blank" rel="noopener noreferrer" class="external-link">
+                LinkedIn
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </a>
+              <a href="https://drive.google.com/file/d/17QShIBAtSto6B0kB_7BqCihuv_0XRVEA/view?usp=sharing" target="_blank" class="external-link">
+                CV
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </a>
+            </nav>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>© 2024 Kulan Gunawardena. All rights reserved.</p>
+        </div>
+      </footer>
+
+</body>
+</html>
+
+
+ 
+

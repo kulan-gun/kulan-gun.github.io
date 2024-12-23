@@ -1,0 +1,155 @@
+/* Global CSS for UX Portfolio */
+
+/* ==========================================
+   Colours and Default Styles
+   ========================================== */
+
+/* CSS Custom Properties (variables) for consistent theming */
+:root {
+    --background: #121212; /* Dark background color for the whole site */
+    --card-background: #1C1C1E; /* Slightly lighter background color for cards */
+    --text-primary: #F5F5F5; /* Main text color (white) */
+    --text-secondary: #a9a9a9; /* Lighter gray for secondary text */
+    --nav-pill-bg: rgba(255, 255, 255, 0.1); /* Background color for navigation pills */
+    --accent-color: #3a86ff; /* Bright color for highlights or important elements */
+    --focus-color: #4d90fe; /* A bright blue for focus indicators */
+    --divider-color: #333333; /* Color for divider lines */
+}
+
+/* Reset default styles and apply box-sizing to all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Enable smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base styles for the body */
+body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif; /* Use Inter as the primary font */
+    min-height: 100vh; /* Ensure the body is at least as tall as the viewport */
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* ==========================================
+   Navigation
+   ========================================== */
+
+/* Styles for the top navigation bar */
+.top-nav {
+    position: fixed; /* Keep the nav bar fixed at the top of the screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensure nav stays on top of other elements */
+    background-color: var(--background);
+}
+
+/* Styles for the logo in the navigation */
+.nav-left .logo {
+    display: block;
+    text-decoration: none;
+}
+
+.nav-left .logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/* Styles for the right side of the navigation (links) */
+.nav-right {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+/* Styles for navigation links and external links */
+.nav-link, .external-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover, .external-link:hover, .nav-link.active {
+    color: var(--text-primary);
+}
+
+/* ==========================================
+   External Link Styles
+   ========================================== */
+
+/* Additional styles for external links (with icons) */
+.external-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.external-link svg {
+    transition: transform 0.2s ease;
+}
+
+.external-link:hover svg {
+    transform: translate(2px, -2px); /* Move icon slightly on hover */
+}
+
+/* ==========================================
+   Main Styles
+   ========================================== */
+
+/* Styles for the main content area */
+main {
+    padding-top: 100px; /* Add space for the fixed navigation */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+/* Focus styles for interactive elements */
+.nav-link:focus,
+.external-link:focus,
+.nav-item:focus,
+.case-study-card:focus {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 2px;
+}
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .nav-right {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    main {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* NEW CODE */

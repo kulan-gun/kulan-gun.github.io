@@ -1,0 +1,437 @@
+/* Main CSS for UX Portfolio - Index Page */
+
+/* Import global styles */
+@import 'global.css';
+
+/* ==========================================
+   Navigation
+   ========================================== */
+
+/* Styles for the top navigation bar */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Makes the logo centred on mobile */
+    z-index: 1000;
+    background-color: var(--background);
+}
+
+/* ==========================================
+   Hero Section Styles and Typescale
+   ========================================== */
+
+/* Hero section layout parameters */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the top */
+    min-height: auto; /* Adjusts the minimum height */
+    padding: 80px 20px 40px; /* Top, horizontal, and bottom padding */
+    text-align: center; /* Centers text horizontally */
+}
+
+/* Styles for header 1 */
+.hero h1 {
+    font-size: 4rem; /* Large font size for hero title */
+    margin-bottom: 1rem; /* Space below the title */
+    color: var(--text-primary); /* Main text colour */
+    font-weight: 600; /* Semi-bold weight */
+    letter-spacing: -0.02em; /* Subtle negative spacing for tighter text */
+    line-height: 1.2;  /* Optimal line height for headings */
+    animation: fadeInUp 0.8s ease-out; /* Apply fadeInUp animation with duration specified */
+}
+
+/* Styles for the all caps captions above headers */
+.caption {
+    color: var(--text-secondary);
+    font-weight: 300; 
+    font-size: 16px; /* 1 rem = 16px */
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 2px; /* Distance between caption and h2 */
+    animation: fadeInUp 0.8s ease-out; /* Apply fadeInUp animation with duration specified */
+}
+
+/* Styles for the "Selected Work" heading or h2 */
+.selected-work-heading {
+    font-size: 2.25rem; /* Size between 4rem (hero h1) and 24px (card title). 2 rem = 32px */
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 2rem; /* Add some space below the heading */
+    text-align: left; /* Align with the case study cards */
+    animation: fadeInUp 0.8s ease-out; /* Apply fadeInUp animation with duration specified */
+}
+
+/* I'm a Product Designer */
+.hero p {
+    font-size: 1.5rem; /* Slightly large paragraph size */
+    color: #FFFFFF; /* Override paragraph text to white */
+    font-weight: 400; /* Regular font weight */
+    margin-bottom: 60px; /* Spacing below the paragraph */
+    
+    /* Hidden state before animation */
+    opacity: 0;
+    visibility: hidden;
+
+    /* Fade-in animation */
+    animation: fadeIn 1000ms ease-out 1000ms forwards; /* Delayed fade-in with a delay */
+}
+
+/* Highlight 'Kulan' with Gradient Text */
+.highlight {
+    display: inline-block;
+    background-image: linear-gradient(0deg, rgb(89, 89, 89) 0%, rgb(255, 255, 255) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Makes the gradient visible */
+    color: #FFFFFF; /* Fallback for unsupported browsers */
+}
+
+/* ==========================================
+   Animations
+   ========================================== */
+
+/* Keyframes for fadeInUp animation used by hero h1 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for fade in animation for hero p */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start completely invisible */
+        visibility: visible; /* Ensure element becomes visible */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+        visibility: visible;
+    }
+}
+
+/* Typing animation with light grey text */
+#typing-animation {
+    color: var(--text-secondary);
+}
+
+/* Typing animation styles */
+#typing-animation {
+    position: relative;
+}
+
+#typing-animation::after {
+    content: '|';
+    position: absolute;
+    right: -1px; /* Reduced from -8px to -1px to remove the blank space */
+    width: 1px; /* Reduced from 3px to 1px to make the cursor thinner */
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Waving hand animation */
+.wave {
+    display: inline-block;
+    animation: wave-animation 3s 1; /* Changed 'infinite' to '1' */
+    transform-origin: 70% 70%;
+}
+
+.wave:hover {
+    animation: wave-animation 2.5s 1;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }
+    100% { transform: rotate( 0.0deg) }
+}
+
+/* ==========================================
+   Container Styles
+   ========================================== */
+
+/* Styles for the container of case study cards */
+.case-studies {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0; /* Removed padding completely */
+}
+
+/* Styles for individual case study cards */
+.case-study-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: var(--card-background);
+    position: relative;
+
+    /* Scroll animation properties */
+    transform: scale(0.8); /* Start smaller for scroll animation */
+    opacity: 0; /* Start invisible */
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out; /* Smooth emergence animation whilst scrolling */
+    will-change: transform, opacity; /* Optimise animation */
+
+    /* Hover effect shared */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white outline */
+}
+
+/* Pseudo-element for hover effect on cards */
+.case-study-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.03);
+    opacity: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    pointer-events: none;
+}
+
+.case-study-card:hover::after {
+    opacity: 1;
+}
+
+/* Animate into view during scroll */
+.case-study-card.in-view {
+    transform: scale(1); /* Grow to full size */
+    opacity: 1; /* Fade in */
+}
+
+/* Hover effects for all cards */
+.case-study-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Brighten outline */
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1), 0 3px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.case-study-card.coming-soon:hover {
+    transform: scale(1); /* No hover enlargement */
+}
+
+/* Styles for the content within case study cards */
+.card-content {
+    padding: 32px;
+    line-height: 1.6;
+}
+
+/* Styles for the header section of case study cards */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.card-text {
+    flex: 1;
+}
+
+/* Styles for the all caps prefix text in cards */
+.card-prefix {
+    color: var(--text-secondary);
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 300;
+    /* Set to normal weight to match footer headings */
+}
+
+/* Styles for the title in cards - initially was 32px */
+.card-title {
+    font-size: 24px;
+    font-weight: 500; /* Reduced from 600 for a lighter weight */
+    margin-bottom: 8px; /* Keep spacing */
+    color: var(--text-primary); /* Maintain primary text color */
+    text-transform: none;  /* No transformation */
+    letter-spacing: 0.02em; /* Slightly tighter spacing than 0.01 */
+    line-height: 1.3; /* Slightly increased line-height from 1.2 for better readability */
+}
+
+/* Styles for the subtitle in cards */
+.card-subtitle {
+    font-size: 16px;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+/* Styles for the image container in case study cards */
+.card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* Keeps the container's aspect ratio */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-image2 {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* Keeps the container's aspect ratio */
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    /* Enables flexbox for centring */
+    justify-content: center;
+    /* Centres horizontally */
+    align-items: center;
+    /* Centres vertically */
+}
+
+.card-image2 img {
+    /* Made a separate element for mockups with no background */
+    width: 80%;
+    /* Adjust with the height to change the image size */
+    height: 80%;
+    /* Adjust with the width to change the image size */
+    object-fit: contain;
+    /* Prevents zooming, keeps entire image visible */
+    display: block;
+}
+
+/* Styles for the arrow icon in case study cards */
+.arrow-icon {
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.case-study-card:hover .arrow-icon {
+    opacity: 1;
+    transform: translate(4px, -4px);
+}
+
+/* Coming Soon Overlay Styles */
+.case-study-card.coming-soon {
+    position: relative;
+    cursor: default;
+}
+
+/* Coming soon overlay */
+.coming-soon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+}
+
+.case-study-card.coming-soon:hover .coming-soon-overlay {
+    opacity: 1; /* Overlay fades in on hover */
+}
+
+.coming-soon-overlay span {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ==========================================
+   Responsive Design
+   ========================================== */
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 60px; /* Reduced top padding for mobile */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Adjusted from 3 to 2.5rem */
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 40px; /* Reduced bottom margin for mobile */
+    }
+
+    .card-content {
+        padding: 24px;
+    }
+
+    .card-title {
+        font-size: 24px;
+    }
+
+    .card-subtitle {
+        font-size: 14px;
+    }
+
+    .selected-work-heading {
+        font-size: 1.75rem; /* Slightly smaller on tablets */
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 40px; /* Further reduced top padding for smaller devices */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 32px; /* Further reduced bottom margin for mobile */
+    }
+
+    .card-content {
+        padding: 16px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .card-subtitle {
+        font-size: 12px;
+    }
+
+    .selected-work-heading {
+        font-size: 1.5rem; /* Slightly smaller on phones */
+    }
+}
+
+/* NEW CODE */
+

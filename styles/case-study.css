@@ -1,0 +1,343 @@
+/* CSS for Case Study Pages */
+
+/* Import global styles */
+@import 'global.css';
+
+/* ========================
+   Case Study Details Section
+   ======================== */
+
+/* Layout for case study pages */
+.case-study-layout {
+    display: grid;
+    grid-template-columns: 140px 1fr; /* Width and main content */
+    gap: 0px; /* Adjust gap between case study section and vertical nav */
+    margin-top: 120px; /* Add enough space to account for the nav bar height */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Styles for the main content area */
+.case-study-content {
+    padding: 0px; /* Applies left and right padding only to the content */
+}
+
+.case-study-subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+/* Horizontal padding for case study details */
+.case-study-details {
+    padding: 18px; /* Adjust padding for better use of space */
+
+    /* Vertical padding for case study header */
+    header {
+        margin-bottom: 48px;
+        padding-top: 16px;
+
+        /* The 'all caps' caption typically used for client names */
+        .caption {
+            color: var(--text-secondary);
+            font-size: 16px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            margin-top: 70px; /* Distance from top */
+        }
+    }
+}
+
+/* Styles for sections within the case study */
+.case-study-details {
+
+    /* Section spacing */
+    section {
+        margin-bottom: 48px;
+        scroll-margin-top: 100px; /* Offset for smooth scrolling */
+    }
+
+    /* Headings - Typescale */
+
+    h1 {
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 16px; /* 1/3rd of font-size */
+    }
+
+    h2 {
+        font-size: 36px; /* Section headers for case studies */
+        font-weight: 600;
+        margin-bottom: 12px; /* Slightly less than h1 */
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 8px; /* Smaller margin for smaller heading */
+    }
+
+    h4 {
+        font-size: 19px;
+        font-weight: 600;
+        margin-bottom: 6px; /* Tighter spacing for smallest heading */
+    }
+
+    /* Paragraphs */
+    p {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    /* Lists */
+    ul {
+        list-style-position: outside;
+        margin-bottom: 16px;
+        padding-left: 20px;
+    }
+
+    ul li {
+        margin-bottom: 8px;
+    }
+}
+
+/* Inset Quote Component */
+.inset-quote {
+    position: relative;
+    margin: 24px 0; /* Adds vertical spacing around the quote */
+}
+
+.inset-quote blockquote {
+    background-color: rgba(255, 255, 255, 0.03); /* Subtle light overlay for dark mode */
+    border-left: 3px solid #4B5563; /* Thicker vertical line on the left */
+    margin: 0;
+    padding: 20px 24px; /* Internal spacing */
+    font-size: 18px; /* Text size */
+    line-height: 1.6; /* Increases line height for better readability */
+    color: #94A3B8; /* Light grey color for text in dark mode */
+    font-weight: 400; /* Regular font weight */
+    border-radius: 0 6px 6px 0; /* Rounded corners on the right side */
+}
+
+
+/* ========================
+  Back Button
+   ======================== */
+
+/* Styles for the back button */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    margin: 24px 24px 24px 0; /* Adjusted right margin to align with content */
+    transition: color 0.2s ease;
+    padding: 0;
+}
+
+.back-button:hover {
+    color: var(--text-primary);
+}
+
+.back-button svg {
+    margin-right: 8px;
+}
+
+/* ========================
+   Navigation
+   ======================== */
+
+/* Styles for the vertical navigation sidebar */
+.vertical-nav {
+    position: sticky; /* Keep sidebar in view while scrolling */
+    width: 120px; /* Adjust to make it thinner */
+    top: 100px;
+    height: calc(100vh - 100px);
+    padding: 0px 0 0px;
+    background-color: var(--background);
+    margin: 0; /* Ensure no unintended margin on the nav */
+
+    /* Styles for the vertical navigation list */
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        margin-bottom: 12px; /* Adjust vertical spacing */
+    }
+}
+
+/* Styles for individual navigation items in the vertical nav */
+.nav-item {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    display: block;
+    padding: 12px 8px;/* Adjust padding inside each vertical nav item */
+    border-radius: 6px;
+}
+
+.nav-item:hover {
+    color: var(--text-primary);
+    background-color: var(--nav-pill-bg);
+}
+
+.nav-item.active {
+    color: var(--text-primary);
+    font-weight: 600;
+    background-color: var(--nav-pill-bg);
+}
+
+/* Styles for the top navigation bar */
+.top-nav {
+    position: fixed; /* Keep the nav bar fixed at the top of the screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensure nav stays on top of other elements */
+    background-color: var(--background);
+}
+
+/* ========================
+   Shimmer Divider
+   ======================== */
+
+/* Styles for the divider between sections */
+.divider {
+    height: 1px;
+    background: linear-gradient(to right, var(--divider-color), var(--text-secondary), var(--divider-color));
+    margin: 0px 0 16px 0; /* 8px top, 16px bottom */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animation for the divider */
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, var(--text-primary), transparent);
+    animation: shimmer 2s forwards;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* ========================
+   Responsive Adjustments
+   ======================== */
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 1024px) {
+    .case-study-layout {
+        grid-template-columns: 160px 1fr; /* Adjust sidebar width for smaller screens */
+        gap: 24px;
+    }
+}
+
+/* Media query for tablets and other devices */
+@media (max-width: 768px) {
+    .case-study-layout {
+        grid-template-columns: 1fr;
+        margin-top: 100px;
+        padding: 0;
+    }
+
+    .vertical-nav {
+        display: none; /* Hide the vertical navigation on mobile */
+    }
+
+    .case-study-content {
+        padding: 0 24px; /* Add horizontal padding to align with the back button */
+    }
+
+    .case-study-details {
+        padding: 24px 0; /* Remove horizontal padding */
+    }
+
+    .back-button {
+        display: none;  /* Hide the back button on mobile */
+    }
+
+    .case-study-details header .card-prefix {
+        margin-top: 24px;/* Add more space at the top on mobile */
+    }
+
+    /* .back-button {
+        margin-top: 24px;
+        display: inline-flex;
+        align-items: center;
+        width: auto;
+        padding: 10px 16px;
+    } */
+   
+}
+
+@media (max-width: 768px) {
+    .inset-quote blockquote {
+        font-size: 16px; /* Slightly smaller text on tablets */
+        padding: 16px 20px; /* Reduced padding on smaller screens */
+    }
+}
+
+
+/* Media query for smaller mobile devices */
+@media (max-width: 480px) {
+    .case-study-layout {
+        padding: 0;
+    }
+
+    .case-study-details {
+        h1 {
+            font-size: 32px;
+        }
+
+        h2 {
+            font-size: 27px;
+        }
+
+        h3 {
+            font-size: 21px;
+        }
+
+        h4 {
+            font-size: 21px;
+        }
+    }
+
+    .case-study-subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .inset-quote {
+        margin: 20px 0; /* Less vertical spacing on mobile */
+    }
+    
+    .inset-quote blockquote {
+        font-size: 15px; /* Even smaller text on mobile */
+        padding: 14px 18px; /* Further reduced padding on mobile */
+    }
+}
+
+
+/* NEW CODE */
+

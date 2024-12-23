@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Handles encoding, preventing issues with displaying special characters -->
+    <meta charset="UTF-8">
+    <!-- Optimises the page for responsiveness, particularly on mobile devices. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Provides instructions to search engine bots about how to handle the page. -->
+    <meta name="robots" content="noindex, nofollow">
+
+ <!-- Added password protection check and noindex tag -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const isAuthenticated = localStorage.getItem('authenticated');
+            if (isAuthenticated !== 'true') {
+                alert('You are not authorised to view this page.');
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+    
+    <title>Case Study | KG - UX Designer</title>
+    <!-- Link to the new CSS file for case study page styles -->
+    <link rel="stylesheet" href="styles/case-study.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <!-- Import the Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top navigation bar -->
+    <nav class="top-nav">
+        <!-- Left side of the navigation (logo) -->
+        <div class="nav-left">
+            <!-- Logo linking to the home page -->
+            <a href="index.html" class="logo" aria-label="Home">
+                <img src="images/logo.png" alt="KG Logo" width="40" height="40">
+            </a>
+        </div>
+
+        <!-- Right side of the navigation (menu items) -->
+        <div class="nav-right">
+            <a href="index.html" class="nav-link">Work</a>
+            <a href="#" class="nav-link">Info</a>
+            <a href="https://www.linkedin.com/in/kulan-gun/" target="_blank" class="external-link">
+                LinkedIn
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+            <a href="/cv.pdf" target="_blank" class="external-link">
+                CV
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main content layout for case study -->
+    <div class="case-study-layout">
+        <!-- Sidebar with navigation -->
+        <aside class="vertical-nav">
+            <a href="index.html" class="back-button">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#overview" class="nav-item">Overview</a></li>
+                    <li><a href="#problem" class="nav-item">Problem</a></li>
+                    <li><a href="#solution" class="nav-item">Solution</a></li>
+                    <li><a href="#process" class="nav-item">Process</a></li>
+                    <li><a href="#results" class="nav-item">Results</a></li>
+                    <li><a href="#conclusion" class="nav-item">Conclusion</a></li>
+                    <li><a href="#next-steps" class="nav-item">Next Steps</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main content area -->
+        <main class="case-study-content">
+            <article class="case-study-details">
+                <!-- Case study header -->
+                <header>
+                    <p class="caption">01 | CONFIDENTIAL CLIENT</p>
+                    <h1>Designing contactless migration</h1>
+                    <p class="case-study-subtitle">
+                        <span class="year">Year: 2024 |</span>
+                        <span class="duration">Duration: 9+ months |</span>
+                        <span class="role">Role: Senior UX Designer</span>
+                    </p>
+                </header>
+
+                <!-- Overview section -->
+                <section id="overview">
+                    <h2>Overview</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                    <p>This case study delves into the comprehensive usability evaluation of nine different fingerprint scanning applications conducted during trials held in Q4 2024. The primary objective was to assess the effectiveness, accuracy, and user experience of these applications to inform future implementations in critical sectors such as government services and border control.</p>
+                    <p>Fingerprint scanning technology plays a pivotal role in modern identity verification processes. With the increasing reliance on biometric authentication, it is essential to ensure that these applications are not only secure but also user-friendly and accessible to a diverse user base.</p>
+                </section>
+
+                <!-- Problem section -->
+                <section id="problem">
+                    <h2>Problem</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                    <p>Despite the proliferation of fingerprint scanning apps, there exists a significant variation in their usability, reliability, and overall performance. This inconsistency poses challenges, especially in high-stakes environments where accurate and efficient identity verification is crucial. Users may experience frustration due to unclear instructions, slow response times, or frequent errors during the scanning process. Additionally, there is a risk of excluding users with different physical attributes or environmental conditions that affect fingerprint recognition.</p>
+                    <p>The challenge was to conduct a thorough evaluation of these applications to identify common usability issues and recommend improvements that would enhance user satisfaction and operational efficiency.</p>
+                </section>
+
+                <!-- Solution section -->
+                <section id="solution">
+                    <h2>Solution</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                    <p>To address these challenges, we designed and executed a comprehensive usability testing program involving the nine selected fingerprint scanning apps. Our approach was multifaceted, incorporating both quantitative and qualitative research methods to gather in-depth insights. Key components of our solution included:</p>
+                    <ul>
+                        <li><strong>Moderated Usability Testing:</strong> We observed participants as they interacted with each app, noting their behaviors, difficulties, and successes.</li>
+                        <li><strong>Cognitive Walkthroughs:</strong> Acting as users ourselves, we performed tasks to identify potential usability issues from a first-person perspective.</li>
+                        <li><strong>Heuristic Evaluation:</strong> Expert reviewers assessed each app against established usability principles to pinpoint design flaws.</li>
+                        <li><strong>Feedback Mechanisms Analysis:</strong> We evaluated how each app provided feedback to users during the fingerprint scanning process, such as visual cues, haptic responses, and error messages.</li>
+                        <li><strong>Performance Testing:</strong> We measured the accuracy and speed of fingerprint recognition under various conditions, including different finger conditions (e.g., wet, dry, dirty) and environmental factors.</li>
+                    </ul>
+                    <p>Our holistic approach ensured that we captured a comprehensive view of each application's strengths and weaknesses.</p>
+                </section>
+
+                <!-- Process section -->
+                <section id="process">
+                    <h2>Process</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                    <p>The evaluation process was meticulously planned and executed over several weeks, involving multiple stakeholders and participants. The key stages included:</p>
+                    <strong><p>1. Planning and Preparation</p></strong>
+                    <p>We began by defining the scope and objectives of the trials, selecting the nine apps based on their relevance and prevalence in the market. Test scenarios were developed to simulate real-world usage, ensuring that the findings would be applicable in practical contexts.</p>
+                    <strong><p>2. Participant Recruitment</p></strong>
+                    <p>A diverse group of participants was recruited to reflect a broad user base, including variations in age, gender, ethnicity, and technological proficiency. This diversity was crucial to understand how different users interact with the fingerprint scanning apps.</p>
+                    <strong><p>3. Conducting trials</p></strong>
+                    <p>During the testing sessions held in Edinburgh, participants were asked to perform a series of tasks using each app. Observations were made regarding their ease of use, any difficulties encountered, and their overall satisfaction. We encouraged participants to verbalize their thoughts to gain deeper insights into their experiences.</p>
+                    <strong><p>4. Data Collection and Analysis</p></strong>
+                    <p>Data was collected through direct observation, participant feedback, and performance metrics. We employed both qualitative and quantitative analysis techniques to interpret the data. Common themes were identified, and statistical analysis was performed on performance measures like recognition speed and accuracy.</p>
+                    <strong><p>5. Reporting and Recommendations</p></strong>
+                    <p>We compiled a comprehensive report detailing our findings, complete with actionable recommendations for each app. The report emphasized areas where improvements could significantly enhance user experience and reliability.</p>
+                </section>
+
+                <!-- Results section -->
+                <section id="results">
+                    <h2>Results</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                    <p>The BSEFT trials yielded significant insights into the usability and performance of the nine fingerprint scanning apps. Key outcomes included:</p>
+                    <h4>Usability Findings</h4>
+                    <ul>
+                        <li><strong>Feedback Mechanisms:</strong> Apps that incorporated clear visual cues, such as finger outlines and real-time feedback, significantly improved user success rates.</li>
+                        <li><strong>Error Handling:</strong> Several apps lacked effective error messages, leaving users uncertain about how to correct scanning issues.</li>
+                        <li><strong>Consistency:</strong> Inconsistent placement of controls and varying workflows across apps confused users who were testing multiple applications.</li>
+                    </ul>
+                    <h4>Performance Metrics</h4>
+                    <ul>
+                        <li><strong>Accuracy:</strong> Three apps consistently achieved over 95% accuracy in fingerprint recognition, even under challenging conditions.</li>
+                        <li><strong>Speed:</strong> The average recognition time varied significantly between apps, ranging from under 1 second to over 5 seconds, affecting user satisfaction.</li>
+                        <li><strong>Environmental Factors:</strong> Performance degradation was noted in some apps when users had wet or dirty fingers, highlighting the need for robust scanning algorithms.</li>
+                    </ul>
+                    
+                    <h4>User Feedback</h4>
+                    <p>Participants provided valuable feedback, emphasizing the importance of:</p>
+                    <ul>
+                        <li><strong>Intuitive Design:</strong> Simple and clean interfaces were preferred, with minimal clutter and clear instructions.</li>
+                        <li><strong>Confidence Building:</strong> Users appreciated apps that instilled confidence through immediate and clear feedback upon successful scans.</li>
+                        <li><strong>Accessibility:</strong> Consideration for users with disabilities or varying levels of technological literacy was noted as an area for improvement.</li>
+                    </ul>
+
+                    <div class="inset-quote">
+                        <blockquote>
+                            "Our journey underscored the pivotal role of site traffic in shaping user intent, particularly highlighting the high intent of Google customers."
+                        </blockquote>
+                    </div>
+                    
+                </section>
+
+                <!-- Conclusion section -->
+                <section id="conclusion">
+                    <h2>Conclusion</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                    <p>The BSEFT trials provided a valuable opportunity to thoroughly assess the current state of fingerprint scanning applications. By combining user-centered design principles with rigorous testing methodologies, we gained deep insights into how these apps perform in real-world scenarios.</p>
+                    <p>The findings highlight the critical importance of usability in biometric applications. Enhancing user experience not only increases satisfaction but also improves security and operational efficiency by reducing errors and support requirements.</p>
+                    <p>Moving forward, the insights from this study will inform the development of more user-friendly and reliable fingerprint scanning solutions, contributing to better service delivery in sectors where secure identity verification is essential.</p>
+                </section>
+
+                <!-- Next Steps section -->
+                <section id="next-steps">
+                    <h2>Next Steps</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                    <p>Building on the success of the BSEFT trials, we plan to:</p>
+                    <ul>
+                        <li>Share our findings with app developers to facilitate improvements and encourage adoption of best practices.</li>
+                        <li>Expand testing to include other biometric modalities, such as facial recognition, to provide a comprehensive evaluation of biometric authentication methods.</li>
+                        <li>Collaborate with government agencies and industry partners to implement the recommended enhancements in real-world applications.</li>
+                        <li>Conduct training sessions and workshops to educate stakeholders on the importance of usability in biometric systems.</li>
+                    </ul>
+                    <p>These steps aim to foster a more secure and user-friendly biometric landscape, benefiting both service providers and end-users.</p>
+                </section>
+            </article>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+
+        <!-- Add this at the end of your body tag, just before the closing </body> -->
+    
+        <footer class="footer">
+            <div class="divider"></div>
+            <div class="footer-content">
+              <div class="footer-section">
+                <h3>MAIN</h3>
+                <nav>
+                  <a href="#work">Work</a>
+                  <a href="#info">Info</a>
+                </nav>
+              </div>
+              <div class="footer-section">
+                <h3>CONTACT</h3>
+                <nav>
+                  <a href="https://www.linkedin.com/in/kulan-gun/" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                  </a>
+                  <a href="https://drive.google.com/file/d/17QShIBAtSto6B0kB_7BqCihuv_0XRVEA/view?usp=sharing" target="_blank">
+                    CV
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                  </a>
+                </nav>
+              </div>
+            </div>
+            <div class="copyright">
+              <p>© 2024 Kulan Gunawardena. All rights reserved.</p>
+            </div>
+          </footer>
+
+</body>
+</html>
+
