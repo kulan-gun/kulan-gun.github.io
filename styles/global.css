@@ -11,7 +11,7 @@
     --text-primary: #F5F5F5; /* Main text color (white) */
     --text-secondary: #a9a9a9; /* Lighter gray for secondary text */
     --nav-pill-bg: rgba(255, 255, 255, 0.1); /* Background color for navigation pills */
-    --accent-color: #3a86ff; /* Bright color for highlights or important elements */
+    --accent-color: #62B0FF; /* Bright color for highlights or important elements, formerly #3a86ff */
     --focus-color: #4d90fe; /* A bright blue for focus indicators */
     --divider-color: #333333; /* Color for divider lines */
 }
@@ -119,6 +119,14 @@ main {
     padding-left: 24px;
     padding-right: 24px;
 }
+
+/* Add specific rules for case study page */
+.case-study-layout main.case-study-content {
+    padding: 0; /* Remove unnecessary padding */
+    margin: 0; /* Align it with grid */
+    max-width: none; /* Allow it to use grid-defined width */
+}
+
 
 /* Focus styles for interactive elements */
 .nav-link:focus,

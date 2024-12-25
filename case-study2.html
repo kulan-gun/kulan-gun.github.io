@@ -12,7 +12,7 @@
       <!-- Favicon -->
       <link rel="icon" type="image/png" href="images/favicon.png">
     
-    <title>Case Study | DWP</title>
+    <title>Case Study | DWP SYFN</title>
     <!-- Link to the new CSS file for case study page styles -->
     <link rel="stylesheet" href="styles/case-study.css">
     <link rel="stylesheet" href="styles/footer.css">
@@ -51,14 +51,13 @@
 
     <!-- Main content layout for case study -->
     <div class="case-study-layout">
-        <!-- Sidebar with navigation -->
         <aside class="vertical-nav">
-            <a href="index.html" class="back-button">
+            <a href="javascript:history.back()" class="back-button">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>
                 Back
-            </a>
+            </a>           
             <nav>
                 <ul>
                     <li><a href="#overview" class="nav-item">Overview</a></li>
@@ -71,11 +70,9 @@
                 </ul>
             </nav>
         </aside>
-
-        <!-- Main content area -->
+        <div></div> <!-- This empty div creates the gap -->
         <main class="case-study-content">
             <article class="case-study-details">
-                <!-- Case study header -->
                 <header>
                     <p class="caption">02 | DWP</p>
                     <h1>Helping citizens get their benefits faster</h1>
@@ -86,60 +83,160 @@
                     </p>
                 </header>
 
-                <!-- Overview section -->
                 <section id="overview">
                     <h2>Overview</h2>
                     <div class="divider" aria-hidden="true"></div>
-                    <p>This case study is in progress.</p>
+                    <p>This case study highlights my work on 'Send your fit note' (SYFN), a service used by 500,000–700,000 citizens annually to submit fit notes and access benefits.</p>
+                    <p>As the Interaction Designer and Design Lead, I worked with a UX writer and user researchers to make the guidance pages clearer and more accessible.</p>
+                    <p>These changes were rolled out to production, improving the user experience and making the process faster and easier for citizens. Increased satisfaction score by 4.6%, completion rate by 2.8%, and digital uptake by 9.7% within 6 months.</p>
                 </section>
 
-                <!-- Problem section -->
                 <section id="problem">
                     <h2>Problem</h2>
                     <div class="divider" aria-hidden="true"></div>
-                    <p>In-progress.</p>
+
+                    <p>A statement of fitness for work, commonly known as a <a href="https://www.gov.uk/government/collections/fit-note" target="_blank" rel="noopener noreferrer">fit note</a>, is an official statement from a doctor, nurse, occupational therapist, pharmacist, or physiotherapist.</p>
+                    <p>A fit note is issued to provide evidence of a healthcare professional's advice about their patient’s fitness for work. The 'Send your fit note' service allows a citizen to upload an image of their fit note and send it to the 'Department for Work and Pensions (DWP)', who use the fit note as evidence to process the citizen's claim for 
+                        <a href="https://www.gov.uk/guidance/new-style-employment-and-support-allowance" target="_blank" rel="noopener noreferrer">
+                            benefits</a>.
+                    </p>
+                    
+                    <p>Citizens were facing significant delays and complications when applying for and receiving their benefits.</p> 
+                    <p>Our analytics and feedback showed that some users:
+                        <ul>
+                            <li>had trouble understanding the guidance content</li>
+                            <li>struggled to upload their fit notes due to issues with the service's backend technologies</li>
+                            <li>dropped on the /upload page due to not having the correct file format</li>
+                        </ul>
+                    <p>This resulted in increased frustration for applicants and a higher workload for staff managing inquiries and complaints.</p>
                 </section>
 
-                <!-- Solution section -->
                 <section id="solution">
                     <h2>Solution</h2>
                     <div class="divider" aria-hidden="true"></div>
-                    <p>In-progress.</p>
+                    <p>We developed new guidance content and concepts for 'upload' pages to improve users' understanding of what's needed.</p> 
+                    <p>Key features include:</p>
+                    <ul>
+                        <li>Clearer and more helpful guidance content and error messages</li>
+                        <li>Better examples of good and bad images of fit notes</li>
+                        <li>Enhanced back-end capabilities to automate fit note scanning</li>
+                    </ul>
                 </section>
 
-                <!-- Process section -->
                 <section id="process">
                     <h2>Process</h2>
                     <div class="divider" aria-hidden="true"></div>
-                    <p>In-progress.</p>
+
+                    <h3>What was the approach?</h3>
+
+                    <p>Our approach involved several key stages:</p>
+                    <ol>
+                        <li>User research: Conducted interviews and surveys with benefit applicants and staff.</li>
+                        <li>System analysis: Evaluated the existing infrastructure and identified bottlenecks.</li>
+                        <li>Prototyping: Developed low and high-fidelity prototypes of the new system.</li>
+                        <li>User testing: Iteratively tested and refined the design with real users.</li>
+                        <li>Development: Worked closely with developers to implement the new system.</li>
+                        <li>Training: Prepared staff for the new system and created user guides.</li>
+                    </ol>
+
+                    <h3>Who are the users?</h3>
+
+                    <p>There are three key user groups</p>
+                    <ul>
+                        <li><strong>Primary users: </strong>A disabled citizen or a citizen who has been sick for 7 or more days uses this service to upload and send their fit note to the 'Department for Work and Pensions', who use it as evidence to process the citizen's claim for benefits.</li>
+                        <li><strong>Agent: </strong>An agent who is tasked with processing the benefit claim. Oftentimes they might need to speak to users who phone for support and assist them with uploading the fit note.</li>
+                        <li><strong>Policy: </strong>This stakeholder group is responsible for setting and implementing policies associated with fit notes and benefit funding. They work with ministers, NHS staff, delivery teams and technical teams.</li>
+                    </ul> 
+
+                    <p>Through research, we identified that primary users are people who are likely to submit their fit note several times as they have a recurring condition. They may also:</p>
+                    <ul>
+                        <li>have limited digital literacy</li>
+                        <li>have accessibility needs</li>
+                        <li>use their phones to access the service as they may not own a computer</li>
+                    </ul> 
+
+                    <h3>Prototype iteration 1</h3>
+
+                    <p>I made design improvements to the guidance pages, error messages, and upload screen. The guidance page underwent two major iterations, informed by feedback from heuristic evaluations and usability testing on desktop and mobile.
+
+                        <div class="inset-quote">
+                            <blockquote>
+                                "My mum wouldn’t know what a QR code is."
+                            </blockquote>
+                        </div>
+
+                        <p>
+                            In Iterations 2 and 3, A/B testing during user research sessions revealed that 'data matrix' was a confusing term for users, and even 'QR code', especially those with lower digital literacy. Collaborating with the Content Designer, we created relatable copy describing the data matrix as a 'black and white square', which resonated well in subsequent testing, as the fit note contains only one square. 
+                        </p>
+                        <p>
+                            I co-authored a <a href="https://medium.com/ucd-trending/vent-ur-ing-into-the-unknown-the-power-of-perspective-in-user-research-40307e3f9fb0#:~:text=My%20mum%20wouldn%E2%80%99t%20know%20what%20a%20QR%20code%20is." target="_blank" rel="noopener noreferrer" aria-label="Read the Medium article titled 'Vent-ur-ing Into the Unknown: The Power of Perspective in User Research'">Medium article</a> highlighting this example.
+                        </p>
+
+                    <h3>Prototype iteration 2</h3>
+
+                    <p>Although these tested reasonably well, we felt we needed another round of research to verify some new ideas.</p>
+                    <p>I experimented with various ways of addressing the drop-off rates on each page. I came up with five different design options and took these to a crit. Following the feedback, I narrowed down to two options and refined these. These were taken to a usability test.</p>
+                    <p>The changes were successfully released into production and at the time of writing this case study, appear in the live service.</p>
+
+                    <strong><p>Before</p></strong>
+
+                    <p>This was the current guidance page users would see if they needed to take a photo. ​This page did not test well and users reported feeling confused by the black border around the fit note, feeling that this was required when in reality it was trying to convey that the entire note needs to be in view.</p> 
+                    <p>The guidance here also doesn't help the user know about other options (e.g. scanning) which yield higher-quality results.</p>
+
+                    <p>On the left shows the guidance users would receive if they go through the /digital-guidance route.</p>
+                    <p>Like the /paper-guidance counterpart, this page did not test well and was misleading. Users with a digital fit note are not able to manipulate the fit note image they've been given in any way. Furthermore, it doesn't explain that an essential component of the fit note that needs to be displayed is the 'data matrix', which is a QR code.</p>
+
+                    <strong><p>After</p></strong>
+
+                    <p>Following several rounds of testing and iteration, we finalised the designs on the right. There is a sufficient amount of information without overwhelming the user.</p>
+                    <p>It is the most accessible, taking the user to a separate page for posting. The image with crosshairs shows that the entire fit note needs to be in a camera's field-of-view.</p>
+                
                 </section>
 
-                <!-- Results section -->
                 <section id="results">
                     <h2>Results</h2>
                     <div class="divider" aria-hidden="true"></div>
-                    <p>In-progress.</p>
 
-                    <div class="inset-quote">
-                        <blockquote>
-                            "Our journey underscored the pivotal role of site traffic in shaping user intent."
-                        </blockquote>
-                    </div>
-                    
+                    <p>It took several design iterations, engagements with design stakeholders at design critiques and usability testing sessions with users. I also drew inspiration from other services with similar features and functionality and collaborated closely with the UX writer to develop improvements.</p>
+
+                    <p>The changes delivered significant results within 6 months, with my designs boosting:</p>
+                    <ul>
+                        <li>satisfaction score by 4.6 percentage points</li>
+                        <li>completion rate by 2.8 percentage points</li>
+                        <li>digital uptake by 9.7 percentage points</li>
+                    </ul>
+
                 </section>
 
-                <!-- Conclusion section -->
                 <section id="conclusion">
                     <h2>Conclusion</h2>
                     <div class="divider" aria-hidden="true"></div>
-                    <p>In-progress.</p>
+
+                    <h3>Data-driven design</h3>
+                    <p>On live projects, leveraging quantitative data for RICE scoring enables smarter prioritisation of design changes, ensuring efforts focus on the highest impact areas. A/B testing further validates these changes, providing clear evidence of how design improvements enhance the overall service.</p>
+
+                    <h3>Digital literacy dilemmas</h3>
+                    <p>Users were advised to take a digital copy of their fit note by "taking a screenshot." However, one user misunderstood this as taking a photo of their computer screen with a smartphone. This insight revealed a bias: assuming users understand terminology we take for granted. It underscored the importance of simplifying content to better support those with lower digital literacy.</p>
+
+                    <h3>A good UX can save lives</h3>
+                    <p>As the users of these services depend on them for benefit funding to support their livelihoods, the service must be user-friendly and accessible. Otherwise, there is a significant risk that users do not receive their benefit funding promptly, causing issues with their mental health and disrupting their way of life.</p>
+
+                    <h3>Design can't solve it all</h3>
+                    <p>Not all problems with a service can be fixed with front-end changes (e.g. content improvements, service re-design, etc.). Sometimes, it is down to technological improvements in the back-end to automate certain processes and reduce the onus on users to do manual tasks, therefore improving the user experience.</p>
+
+                    <h3>Final remarks</h3>
+                    <p>By focusing on user needs and leveraging modern technology, we were able to create a system that not only speeds up the benefits process but also improves the overall experience for both citizens and government employees. This project demonstrates the power of user-centered design in transforming public services.</p>
                 </section>
 
-                <!-- Next Steps section -->
                 <section id="next-steps">
                     <h2>Next Steps</h2>
                     <div class="divider" aria-hidden="true"></div>
-                    <p>In-progress.</p>
+                    <p>Moving forward, we plan to:</p>
+                    <ul>
+                        <li>Implement machine learning for more accurate eligibility predictions</li>
+                        <li>Improve the service for even greater accessibility</li>
+                        <li>Conduct ongoing user research to continue improving the system</li>
+                    </ul>
                 </section>
             </article>
         </main>
@@ -168,7 +265,7 @@
                       <path d="M7 17L17 7M17 7H7M17 7V17"/>
                     </svg>
                   </a>
-                  <a href="https://drive.google.com/file/d/17QShIBAtSto6B0kB_7BqCihuv_0XRVEA/view?usp=sharing" target="_blank">
+                  <a href="https://read.cv/kulan.gun" target="_blank">
                     CV
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M7 17L17 7M17 7H7M17 7V17"/>
