@@ -72,7 +72,7 @@
 .hero p {
     font-size: 1.5rem; /* Slightly large paragraph size */
     color: #FFFFFF; /* Override paragraph text to white */
-    font-weight: 400; /* Regular font weight */
+    font-weight: 400; /* Regular font weight to match typing-animation */
     margin-bottom: 60px; /* Spacing below the paragraph */
     font-family: 'Fira Code', 'Courier New', Courier, monospace; /* If removed, reverts back to Inter */
     
@@ -83,8 +83,6 @@
     /* Fade-in animation */
     animation: fadeIn 1000ms ease-out 1000ms forwards; /* Delayed fade-in with a delay */
 }
-
-
 
 /* Highlight 'Kulan' with Gradient Text */
 .highlight {
