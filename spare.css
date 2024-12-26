@@ -7,3 +7,50 @@
     transform: scale(1.02);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
+
+
+
+
+/* Horizontal padding for case study details */
+.case-study-details {
+    padding: 18px; /* Adjust horizontal padding for better use of space */
+
+    /* Vertical padding for case study header */
+    header {
+        margin-bottom: 48px;
+        padding-top: 16px;
+
+        /* The 'all caps' caption typically used for client names */
+        .caption {
+            color: var(--text-secondary);
+            font-size: 16px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            margin-top: 70px; /* Distance from top */
+        }
+    }
+}
+
+/* Styles for sections within the case study */
+.case-study-details {
+
+    /* Section spacing */
+    section {
+        margin-bottom: 48px;
+        scroll-margin-top: 100px; /* Offset for smooth scrolling */
+    }
+
+}
+
+-------
+
+/* Caption for client name or project type */
+.case-study-details header .caption {
+    color: var(--text-secondary);
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    margin-top: 70px; /* Distance from top */
+}

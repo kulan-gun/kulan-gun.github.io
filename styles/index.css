@@ -74,6 +74,7 @@
     color: #FFFFFF; /* Override paragraph text to white */
     font-weight: 400; /* Regular font weight */
     margin-bottom: 60px; /* Spacing below the paragraph */
+    font-family: 'Fira Code', 'Courier New', Courier, monospace; /* If removed, reverts back to Inter */
     
     /* Hidden state before animation */
     opacity: 0;
@@ -82,6 +83,8 @@
     /* Fade-in animation */
     animation: fadeIn 1000ms ease-out 1000ms forwards; /* Delayed fade-in with a delay */
 }
+
+
 
 /* Highlight 'Kulan' with Gradient Text */
 .highlight {
@@ -129,6 +132,7 @@
 /* Typing animation styles */
 #typing-animation {
     position: relative;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace; /* If removed, reverts back to Inter */
 }
 
 #typing-animation::after {
