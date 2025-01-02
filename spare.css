@@ -54,3 +54,26 @@
     margin-bottom: 8px;
     margin-top: 70px; /* Distance from top */
 }
+
+
+
+/* Example showing different gap sizes */
+.case-study-layout {
+    display: grid;
+    /* You can adjust the second value (currently 40px) to change the gap width */
+    grid-template-columns: 120px 24px 200px minmax(auto, 700px);
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+    align-items: start;
+    gap: 0 24px;
+}
+
+/* If you want to style the gap column itself */
+.case-study-layout > div:nth-child(2) {
+    /* Optional: Add a visual indicator for the gap */
+    /* background: rgba(255, 255, 255, 0.05); */
+    grid-column: 2;
+}
+
