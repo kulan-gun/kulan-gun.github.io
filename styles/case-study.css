@@ -93,8 +93,9 @@
 .case-study-details p {
     font-size: 16px;
     margin-bottom: 16px;
+    max-width: 75ch; /* Limit width to approximately 75 characters */
+    overflow-wrap: break-word; /* Ensure long words don't overflow */
 }
-
 /* Lists */
 .case-study-details ul,
 .case-study-details ol {
@@ -129,7 +130,6 @@
     color: var(--text-secondary);
     border-bottom-color: var(--text-secondary);
 }
-
 
 /* Inset Quote Component */
 .inset-quote {
@@ -184,7 +184,7 @@
     top: 100px; /* Adjust to align below the header */
     height: calc(100vh - 100px); /* Full height minus header */
     padding: 0; /* No extra padding */
-    background-color: var(--background);
+    /* background-color: var(--background); */
 
     /* Styles for the vertical navigation list */
     ul {
@@ -195,7 +195,6 @@
         margin-bottom: 12px; /* Adjust vertical spacing */
     }
 }
-
 
 /* Vertical navigation sidebar */
 .vertical-nav {
@@ -238,7 +237,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 1000; /* Ensure nav stays on top of other elements */
-    background-color: var(--background);
+    /* background-color: var(--background); */
 }
 
 /* ========================

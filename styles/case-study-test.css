@@ -1,0 +1,438 @@
+/* CSS for Case Study Pages */
+
+/* Import global styles */
+@import 'global.css';
+
+/* ========================
+   Case Study Details Section
+   ======================== */
+
+/* Layout for case study pages */
+.case-study-layout {
+    display: grid;
+    grid-template-columns: 120px 40px 1fr; /* Sidebar: 120px, Gap: 40px, Content: Flexible */
+    max-width: 1200px; /* Constrain entire layout */
+    width: 100%; /* Ensure layout spans the available space */
+    margin: 0 auto; /* Center horizontally */
+    padding: 0 24px; /* Add horizontal padding */
+    align-items: start; /* Ensure content aligns at the top */
+}
+
+body {
+    margin: 0;
+    padding: 0px; /* Vertical padding - usually 16px */
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* ========================
+   Grid system
+   ======================== */
+
+/* Single Column Grid */
+.single-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Ensure equal-width columns for proper alignment */
+    gap: 20px; /* Maintain consistent spacing between columns */
+    align-items: start;
+}
+
+.two-column img {
+    max-width: 100%; /* Ensure images stay within their column */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline display issues */
+    margin: 6px auto 0; /* Add a small top margin to push the image down */
+}
+
+/* Hybrid Grid (Two Rows) */
+.hybrid-grid {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.hybrid-grid .full-width {
+    grid-column: 1 / -1;
+}
+
+/* Hybrid Triad Grid (Two Rows, Three Columns) */
+.hybrid-triad-grid {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.hybrid-triad-grid .full-width {
+    grid-column: 1 / -1; /* Spans all columns */
+}
+
+.hybrid-triad-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* ========================
+   Main content
+   ======================== */
+
+/* Main content area */
+.case-study-content {
+    width: 100%; /* Allow content to fill the space allocated by grid */
+    max-width: none; /* Remove any global constraints */
+    padding: 0; /* Ensure no extra padding conflicts */
+    margin: 0; /* Prevent unintended margins */
+}
+
+/* Case study subtitle (year, duration, role) */
+.case-study-subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+/* Horizontal padding and overall styles for case study details */
+.case-study-details {
+    padding: 18px; /* Adjust horizontal padding for better use of space */
+}
+/* Case study header */
+.case-study-details header {
+    margin-bottom: 48px;
+    padding-top: 16px;
+}
+
+/* Section spacing */
+.case-study-details section {
+    margin-bottom: 48px;
+    scroll-margin-top: 100px; /* Offset for smooth scrolling */
+}
+
+/* ========================
+   Typography and layout
+   ======================== */
+
+/* Case study subtitle (year, duration, role) */
+.case-study-subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+/* Caption for client name or project type */
+.case-study-layout .case-study-details header .caption {
+    color: var(--text-secondary);
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    margin-top: 0px; /* Distance from top - previously this was 70px when the top nav was fixed */
+}
+
+/* Headings */
+.case-study-details h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.case-study-details h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.case-study-details h3 {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Paragraphs */
+.case-study-details p {
+    font-size: 16px;
+    margin-bottom: 16px;
+    max-width: 60ch; /* Limit width to approximately 75 characters */
+    overflow-wrap: break-word; /* Ensure long words don't overflow */
+}
+/* Lists */
+.case-study-details ul,
+.case-study-details ol {
+    margin-bottom: 16px;
+    padding-left: 20px;
+}
+
+.case-study-details ul {
+    list-style-position: outside;
+}
+
+.case-study-details ul li,
+.case-study-details ol li {
+    margin-bottom: 8px;
+}
+
+/* Hyperlink styles */
+.case-study-details a {
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-color);
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.case-study-details a:hover,
+.case-study-details a:focus {
+    color: var(--text-primary);
+    border-bottom-color: var(--text-primary);
+}
+
+.case-study-details a:active {
+    color: var(--text-secondary);
+    border-bottom-color: var(--text-secondary);
+}
+
+/* Inset Quote Component */
+.inset-quote {
+    position: relative;
+    margin: 24px 0; /* Adds vertical spacing around the quote */
+}
+
+.inset-quote blockquote {
+    background-color: rgba(255, 255, 255, 0.03); /* Subtle light overlay for dark mode */
+    border-left: 3px solid #4B5563; /* Thicker vertical line on the left */
+    margin: 0;
+    padding: 20px 24px; /* Internal spacing */
+    font-size: 16px; /* Text size */
+    line-height: 1.6; /* Increases line height for better readability */
+    color: #94A3B8; /* Light grey color for text in dark mode */
+    font-weight: 400; /* Regular font weight */
+    border-radius: 0 6px 6px 0; /* Rounded corners on the right side */
+}
+
+/* ========================
+  Back Button
+   ======================== */
+
+/* Styles for the back button */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    margin: 24px 24px 24px 0; /* Adjusted right margin to align with content */
+    transition: color 0.2s ease;
+    padding: 0;
+}
+
+.back-button:hover {
+    color: var(--text-primary);
+}
+
+.back-button svg {
+    margin-right: 8px;
+}
+
+/* ========================
+   Navigation
+   ======================== */
+
+/* Styles for the vertical navigation sidebar */
+.vertical-nav {
+    position: sticky; /* Keep sidebar in view while scrolling */
+    width: 120px; /* Adjust to make it thinner */
+    top: 108px; /* Adjusts the alignment with the vertical nav bar and the header */
+    height: calc(100vh - 100px); /* Full height minus header */
+    padding: 0; /* No extra padding */
+    /* background-color: var(--background); */
+
+    /* Styles for the vertical navigation list */
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        margin-bottom: 12px; /* Adjust vertical spacing between tabs */
+    }
+}
+
+/* Styles for individual navigation items in the vertical nav */
+.nav-item {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    display: block;
+    padding: 12px 8px;/* Adjust padding inside each vertical nav item */
+    border-radius: 6px;
+}
+
+.nav-item:hover {
+    color: var(--text-primary);
+    background-color: var(--nav-pill-bg);
+}
+
+.nav-item.active {
+    color: var(--text-primary);
+    font-weight: 600;
+    background-color: var(--nav-pill-bg);
+}
+
+/* Styles for the top navigation bar */
+.top-nav {
+    position: relative; /* fixed = fixed the navbar at the top, versus relative */
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 24px; /* usually 24px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensure it stays above other elements */
+    background: transparent; /* Navbar itself remains transparent */
+}
+
+/* Pseudo-element for the hexagonal background */
+.top-nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='29' height='50.115' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%23121212ff'/><path d='M14.498 16.858L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z' stroke-width='1' stroke='%231c1c1eff' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    background-size: cover; /* Match the hexagonal pattern size */
+    background-repeat: repeat; /* Repeat the pattern */
+    background-position: center; /* Align with body background */
+    z-index: -1; /* Send behind navbar content */
+    opacity: 1; /* Fully opaque background */
+    pointer-events: none; /* Ensure clicks pass through the background */
+}
+
+
+/* ========================
+   Shimmer Divider
+   ======================== */
+
+/* Styles for the divider between sections */
+.divider {
+    height: 1px;
+    background: linear-gradient(to right, var(--divider-color), var(--text-secondary), var(--divider-color));
+    margin: 0px 0 16px 0; /* 8px top, 16px bottom */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animation for the divider */
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, var(--text-primary), transparent);
+    animation: shimmer 2s forwards;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* ========================
+   Responsive Adjustments
+   ======================== */
+
+/* Media query for smaller screens */
+@media (max-width: 1024px) {
+    .case-study-layout {
+        grid-template-columns: 100px 30px 1fr; /* Slightly reduce sidebar and gap */
+    }
+
+    .vertical-nav {
+        width: 100px;
+    }
+}
+
+/* Media query for tablets and other devices */
+@media (max-width: 768px) {
+    .case-study-details header {
+        padding-top: 0px; /* Restore vertical spacing above <h1>, previously 24px */
+        margin-bottom: 48px; /* Keep spacing consistent */
+    }
+
+    .case-study-layout {
+        grid-template-columns: 1fr; /* Stack everything vertically */
+        padding: 24px 0; /* Add vertical padding at the top to reveal the client name and reduce horizontal padding to align with footer */
+    }
+
+    .vertical-nav {
+        display: none; /* Hide sidebar on mobile */
+    }
+
+    .case-study-content {
+        padding: 0 16px; /* Add horizontal padding to match footer */
+    }
+
+    .inset-quote blockquote {
+        font-size: 16px; /* Slightly smaller text for tablets */
+        padding: 16px 20px; /* Adjust padding for tablets */
+    }
+}
+
+/* Media query for smaller mobile devices */
+@media (max-width: 480px) {
+    .case-study-layout {
+        padding-top: 24px; /* Add vertical padding at the top to reveal the client name */
+        grid-template-columns: 1fr; /* Keep stacked layout */
+    }
+
+    .case-study-details {
+        h1 {
+            font-size: 27px; /* Scale down headings */
+        }
+
+        h2 {
+            font-size: 21px;
+        }
+
+        h3 {
+            font-size: 19px;
+        }
+    }
+
+    .case-study-subtitle {
+        font-size: 16px; /* Adjust subtitle size */
+    }
+
+    .inset-quote {
+        margin: 20px 0; /* Adjust vertical spacing */
+    }
+
+    .inset-quote blockquote {
+        font-size: 15px; /* Further reduce text size for smaller screens */
+        padding: 14px 18px; /* Reduce padding */
+    }
+}
+
+/* NEW CODE */
+
+

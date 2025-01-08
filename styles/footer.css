@@ -5,9 +5,9 @@
 /* Main footer container */
   .footer {
       width: 100%;
-      padding: 48px 0;
+      padding: 24px 0; /* Adds padding for the footer (typically vertical) */
       margin-top: auto;
-      background-color: var(--background);
+      /* background-color: var(--background); */
       color: var(--text-primary);
     }
   

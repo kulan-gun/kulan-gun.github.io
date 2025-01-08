@@ -3,22 +3,40 @@
 /* Import global styles */
 @import 'global.css';
 
+
 /* ==========================================
    Navigation
    ========================================== */
 
-/* Styles for the top navigation bar */
+/* Top navigation bar styles */
 .top-nav {
-    position: fixed;
+    position: relative; /* Fix the navbar at the top with 'fixed', or make relative so it scrolls too */
     top: 0;
     left: 0;
     right: 0;
     padding: 24px;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Makes the logo centred on mobile */
-    z-index: 1000;
-    background-color: var(--background);
+    align-items: center;
+    z-index: 1000; /* Ensure it stays above other elements */
+    background: transparent; /* Navbar itself remains transparent */
+}
+
+/* Pseudo-element for the hexagonal background */
+.top-nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='29' height='50.115' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%23121212ff'/><path d='M14.498 16.858L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z' stroke-width='1' stroke='%231c1c1eff' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    background-size: cover; /* Match the hexagonal pattern size */
+    background-repeat: repeat; /* Repeat the pattern */
+    background-position: center; /* Align with body background */
+    z-index: -1; /* Send behind navbar content */
+    opacity: 1; /* Fully opaque background */
+    pointer-events: none; /* Ensure clicks pass through the background */
 }
 
 /* ==========================================
