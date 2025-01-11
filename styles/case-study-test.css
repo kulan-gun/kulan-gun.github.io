@@ -56,6 +56,26 @@ img {
     margin: 6px auto 0; /* Add a small top margin to push the image down */
 }
 
+.two-column-reversed {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Equal-width columns */
+    gap: 20px; /* Space between columns */
+    align-items: start;
+}
+
+.two-column-reversed img {
+    max-width: 100%; /* Ensure images stay within their column */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline display issues */
+    margin: 0; /* Remove auto-centering to match alignment with other grids */
+    padding: 0; /* Ensure no additional padding affects positioning */
+}
+
+.two-column-reversed div {
+    text-align: left; /* Align text to the left for readability */
+    padding: 10px; /* Add padding to create space inside the text column */
+}
+
 /* Hybrid Grid (Two Rows) */
 .hybrid-grid {
     display: grid;
