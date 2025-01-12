@@ -27,7 +27,7 @@ body {
 img {
     max-width: 100%;
     height: auto;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 8px;
 }
 
@@ -38,14 +38,38 @@ img {
 /* Single Column Grid */
 .single-column {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr; /* Single-column layout */
+    gap: 32px; /* Space between items */
+    margin-bottom: 32px; /* Space below the single-column container */
+}
+
+/* Figure Styling */
+.single-column figure {
+    display: flex; /* Use Flexbox to stack image and caption */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center-align content */
+    margin: 0; /* Reset default margins */
+}
+
+/* Image Styling */
+.single-column img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+/* Caption Styling */
+.single-column figcaption {
+    margin-top: 8px; /* Add spacing between image and caption */
+    font-size: 14px; /* Set font size for readability */
+    color: #BABABA; /* Light grey colour for the caption */
+    text-align: center; /* Centre-align the text */
 }
 
 .two-column {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Ensure equal-width columns for proper alignment */
-    gap: 20px; /* Maintain consistent spacing between columns */
+    gap: 32px; /* Maintain consistent spacing between columns */
     align-items: start;
 }
 
@@ -59,7 +83,7 @@ img {
 .two-column-reversed {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Equal-width columns */
-    gap: 20px; /* Space between columns */
+    gap: 32px; /* Space between columns */
     align-items: start;
 }
 
@@ -76,34 +100,102 @@ img {
     padding: 10px; /* Add padding to create space inside the text column */
 }
 
+.two-column .backgroundless-img {
+    max-width: 60%; /* Limit the width to 60% of its container */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Treat as a block element for consistent alignment */
+    margin: 10px auto; /* Center the image and add vertical spacing */
+    background-color: transparent; /* Ensure no background is added */
+    border: none; /* Remove any border */
+}
+
+/* Specific Spacing for Process Elements */
+.two-column, .two-column-reversed {
+    gap: 40px; /* Space between columns */
+    margin-bottom: 32px; /* Space below the two-column container */
+}
+
 /* Hybrid Grid (Two Rows) */
 .hybrid-grid {
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 32px;
 }
 
 .hybrid-grid .full-width {
     grid-column: 1 / -1;
 }
 
-/* Hybrid Triad Grid (Two Rows, Three Columns) */
+/* Triple Grid (Three Rows) */
+.triple-grid {
+    display: grid;
+    grid-template-rows: auto auto auto; /* Add an extra row */
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    gap: 32px; /* Maintain column spacing */
+    row-gap: 8px; /* Reduce vertical spacing between rows */
+}
+
+/* Position headings in their respective columns */
+.triple-grid .before-heading {
+    grid-column: 1; /* Place "Before" heading in the first column */
+    margin: 0; /* Reset default margins */
+    margin-bottom: 4px; /* Add a small margin below the heading */
+}
+
+.triple-grid .after-heading {
+    grid-column: 2; /* Place "After" heading in the second column */
+    margin: 0; /* Reset default margins */
+    margin-bottom: 4px; /* Add a small margin below the heading */
+}
+
+/* Images */
+.triple-grid img {
+    width: 90%; /* Resize images */
+    margin: 0; /* Remove extra vertical spacing */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Full-width content in the grid */
+.triple-grid .full-width {
+    grid-column: 1 / -1; /* Span all columns */
+}
+
+/* Hybrid Triad Grid with three columns and three rows */
 .hybrid-triad-grid {
     display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-rows: auto auto auto; /* Rows for heading, image, and paragraph */
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns */
+    gap: 32px; /* Default spacing for rows and columns */
+    row-gap: 16px; /* Reduce vertical spacing specifically between rows */
+    column-gap: 40px; /* Maintain horizontal spacing */
+    justify-items: center; /* Centre content horizontally */
 }
 
-.hybrid-triad-grid .full-width {
-    grid-column: 1 / -1; /* Spans all columns */
+/* Headings in the first row */
+.hybrid-triad-grid h3 {
+    grid-row: 1; /* Place in the first row */
+    margin: 0 0 8px 0; /* Reduce the bottom margin to bring it closer to the image */
+    text-align: center; /* Centre the text within the element */
 }
 
+/* Images in the second row */
 .hybrid-triad-grid img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+    grid-row: 2; /* Place in the second row */
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Crop images to maintain consistent dimensions */
+    border-radius: 8px; /* Rounded corners */
+    display: block; /* Ensure proper block layout */
+}
+
+/* Paragraphs in the third row */
+.hybrid-triad-grid p {
+    grid-row: 3; /* Place in the third row */
+    margin: 0; /* Remove default margins */
+    font-size: 14px; /* Adjust font size for readability */
+    text-align: center; /* Centre the text horizontally */
+    align-self: start; /* Align text to the top of its grid cell */
 }
 
 /* ========================
@@ -137,7 +229,7 @@ img {
 
 /* Section spacing */
 .case-study-details section {
-    margin-bottom: 48px;
+    margin-bottom: 48px; /* Space between sections */
     scroll-margin-top: 100px; /* Offset for smooth scrolling */
 }
 
@@ -172,13 +264,13 @@ img {
 .case-study-details h2 {
     font-size: 24px;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .case-study-details h3 {
     font-size: 19px;
     font-weight: 600;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
 }
 
 /* Paragraphs */
@@ -191,8 +283,11 @@ img {
 /* Lists */
 .case-study-details ul,
 .case-study-details ol {
-    margin-bottom: 16px;
+    margin-bottom: 16px;  /* Maintain spacing */
     padding-left: 20px;
+    max-width: 60ch; /* Limit character width (i.e. character limit) */
+    overflow-wrap: break-word; /* Prevent text from overflowing */
+    line-height: 1.6; /* Match paragraph line height for readability */
 }
 
 .case-study-details ul {
@@ -226,7 +321,8 @@ img {
 /* Inset Quote Component */
 .inset-quote {
     position: relative;
-    margin: 24px 0; /* Adds vertical spacing around the quote */
+    margin-top: 24px;
+    margin-bottom: 24px; /* Space around the quote block */
 }
 
 .inset-quote blockquote {
@@ -454,5 +550,4 @@ img {
 }
 
 /* NEW CODE */
-
 
