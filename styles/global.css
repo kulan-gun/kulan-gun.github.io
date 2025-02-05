@@ -8,7 +8,8 @@
 :root {
     --background: #121212; /* Dark background color for the whole site */
     --card-background: #1C1C1E; /* Slightly lighter background color for cards */
-    --text-primary: #F5F5F5; /* Main text color (white - F5F5F5) */
+    --text-primary: #F5F5F5; /* Main text color for headers (white - F5F5F5) */
+    --text-body: #D1D1D1; /* New softer grey for body text and lists */
     --text-secondary: #BABABA; /* Lighter gray for secondary text */
     --nav-pill-bg: rgba(255, 255, 255, 0.1); /* Background color for navigation pills */
     --accent-color: #62B0FF; /* Bright color for highlights or important elements, formerly #3a86ff */

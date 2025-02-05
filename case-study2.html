@@ -30,24 +30,40 @@
         <div class="nav-left">
             <!-- Logo linking to the home page -->
             <a href="index.html" class="logo" aria-label="Home">
-                <img src="images/logo.png" alt="KG Logo" width="40" height="40">
+                <img src="images/logo.png" alt="KG Logo" loading="lazy">
             </a>
         </div>
 
         <!-- Right side of the navigation (menu items) -->
         <div class="nav-right">
-            <a href="index.html" class="nav-link">Work</a>
-            <a href="#" class="nav-link">Info</a>
-            <a href="https://www.linkedin.com/in/kulan-gun/" target="_blank" class="external-link">
-                LinkedIn
+            <!-- Internal link to the Work section, marked as active -->
+            <a href="index.html" class="nav-link active" data-section="work">Work</a>
+            <!-- Internal link to the Info section -->
+            <!-- <a href="#" class="nav-link">Info</a> -->
+
+            <!-- External link to Credly profile -->
+            <a href="https://www.credly.com/users/kulan-gunawardena" target="_blank" class="external-link">
+                Credentials
+                <!-- SVG icon for external link -->
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
                 </svg>
             </a>
-            <a href="/cv.pdf" target="_blank" class="external-link">
-                CV
+
+            <!-- External link to LinkedIn profile -->
+            <a href="https://www.linkedin.com/in/kulan-gun/" target="_blank" class="external-link">
+                LinkedIn
+                <!-- SVG icon for external link -->
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+            <!-- External link to CV/resume -->
+            <a href="https://read.cv/kulan.gun" target="_blank" class="external-link">
+                CV
+                <!-- SVG icon for external link -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
                 </svg>
             </a>
         </div>

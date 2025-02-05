@@ -112,6 +112,17 @@
     color: #FFFFFF; /* Fallback for unsupported browsers */
 }
 
+/* Silver Gradient */
+.highlight {
+    display: inline-block;
+    background-image: linear-gradient(0deg, rgb(180, 180, 180) 0%, rgb(230, 230, 230) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Makes the gradient visible */
+    color: #DADADA; /* Fallback silver for unsupported browsers */
+}
+
+
 /* ==========================================
    Animations
    ========================================== */
@@ -142,7 +153,7 @@
 
 /* Typing animation with light grey text */
 #typing-animation {
-    color: var(--text-secondary);
+    color: #F5F5F5;
 }
 
 /* Typing animation styles */

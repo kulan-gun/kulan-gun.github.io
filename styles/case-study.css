@@ -14,7 +14,7 @@
     max-width: 1200px; /* Constrain entire layout */
     width: 100%; /* Ensure layout spans the available space */
     margin: 0 auto; /* Center horizontally */
-    padding: 0 24px; /* Add horizontal padding */
+    padding: 0px 24px; /* Add horizontal padding */
     align-items: start; /* Ensure content aligns at the top */
 }
 
@@ -40,7 +40,7 @@
 /* Case study header */
 .case-study-details header {
     margin-bottom: 48px;
-    padding-top: 16px;
+    padding-top: 32px; /* Adjust vertical padding to adjust distance from the top - normally 32px */
 }
 
 /* Section spacing */
@@ -48,6 +48,15 @@
     margin-bottom: 48px;
     scroll-margin-top: 100px; /* Offset for smooth scrolling */
 }
+
+/* Generic styling for all rounded images */
+.rounded-image {
+    width: 70%; /* Default size (adjustable in HTML if needed) */
+    border-radius: 12px; /* Softly rounded edges */
+    display: block; /* Ensures proper alignment */
+    max-width: 100%; /* Prevents images from overflowing */
+}
+
 
 /* ========================
    Typography
@@ -67,7 +76,7 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     margin-bottom: 8px;
-    margin-top: 70px; /* Distance from top */
+    margin-top: 70px; /* Default for desktop. Distance from top - normally 70px */
 }
 
 /* Headings */
@@ -96,12 +105,33 @@
     max-width: 75ch; /* Limit width to approximately 75 characters */
     overflow-wrap: break-word; /* Ensure long words don't overflow */
 }
+
+.case-study-details p, 
+.case-study-details ul li, 
+.case-study-details ol li {
+    color: var(--text-body);
+}
+
 /* Lists */
 .case-study-details ul,
 .case-study-details ol {
     margin-bottom: 16px;
     padding-left: 20px;
 }
+
+.case-study-details ul,
+.case-study-details ol {
+    max-width: 75ch; /* Constrain width similar to paragraphs */
+    overflow-wrap: break-word; /* Ensure long words break properly */
+    padding-left: 24px; /* Adjust for alignment */
+}
+
+.case-study-details ul li,
+.case-study-details ol li {
+    max-width: 75ch; /* Ensure bullet points follow the same width as paragraphs */
+    overflow-wrap: break-word;
+}
+
 
 .case-study-details ul {
     list-style-position: outside;
@@ -147,6 +177,8 @@
     color: #94A3B8; /* Light grey color for text in dark mode */
     font-weight: 400; /* Regular font weight */
     border-radius: 0 6px 6px 0; /* Rounded corners on the right side */
+    max-width: 75ch; /* Match paragraph and bullet point constraints */
+    overflow-wrap: break-word; /* Ensure long words break properly */
 }
 
 /* ========================
@@ -290,10 +322,18 @@
     }
 }
 
+/* Reduce margin-top for tablets and smaller screens */
+@media (max-width: 1024px) {
+    .case-study-layout .case-study-details header .caption {
+        margin-top: 0px; /* Remove vertical distance from top on tablets and mobile */
+    }
+}
+
 /* Media query for tablets and other devices */
 @media (max-width: 768px) {
     .case-study-details header {
-        padding-top: 24px; /* Restore vertical spacing above <h1> */
+        padding-top: 0px; /* Restore vertical spacing above <h1> - usually 24px */
+        margin-top: 0px; /* Ensure no unwanted margin */
         margin-bottom: 48px; /* Keep spacing consistent */
     }
 
@@ -313,6 +353,27 @@
     .inset-quote blockquote {
         font-size: 16px; /* Slightly smaller text for tablets */
         padding: 16px 20px; /* Adjust padding for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .top-nav {
+        position: relative; /* Allows scrolling */
+    }
+}
+
+@media (max-width: 768px) {
+    .top-nav {
+        margin-bottom: 0px; /* Prevents extra space after nav */
+    }
+}
+
+/* Adjust images specifically for mobile screens */
+@media (max-width: 768px) {
+    .case-study-details img {
+        width: 95%; /* Scale images slightly smaller to fit mobile layout */
+        max-width: none; /* Remove max-width constraint for flexibility */
+        margin: 12px auto; /* Adjust spacing */
     }
 }
 

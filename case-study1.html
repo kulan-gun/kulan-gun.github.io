@@ -9,9 +9,9 @@
     <!-- Provides instructions to search engine bots about how to handle the page. -->
     <!-- <meta name="robots" content="noindex, nofollow"> -->
 
-      <!-- Favicon -->
-      <link rel="icon" type="image/png" href="images/favicon.png">
-    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
     <title>Case Study | GOV.UK Client</title>
     <!-- Link to the new CSS file for case study page styles -->
     <link rel="stylesheet" href="styles/case-study.css">
@@ -19,6 +19,7 @@
     <!-- Import the Inter font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Top navigation bar -->
     <nav class="top-nav">
@@ -26,22 +27,38 @@
         <div class="nav-left">
             <!-- Logo linking to the home page -->
             <a href="index.html" class="logo" aria-label="Home">
-                <img src="images/logo.png" alt="KG Logo" width="40" height="40">
+                <img src="images/logo.png" alt="KG Logo" loading="lazy">
             </a>
         </div>
 
         <!-- Right side of the navigation (menu items) -->
         <div class="nav-right">
-            <a href="index.html" class="nav-link">Work</a>
-            <a href="#" class="nav-link">Info</a>
-            <a href="https://www.linkedin.com/in/kulan-gun/" target="_blank" class="external-link">
-                LinkedIn
+            <!-- Internal link to the Work section, marked as active -->
+            <a href="index.html" class="nav-link active" data-section="work">Work</a>
+            <!-- Internal link to the Info section -->
+            <!-- <a href="#" class="nav-link">Info</a> -->
+
+            <!-- External link to Credly profile -->
+            <a href="https://www.credly.com/users/kulan-gunawardena" target="_blank" class="external-link">
+                Credentials
+                <!-- SVG icon for external link -->
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M7 17L17 7M17 7H7M17 7V17"/>
                 </svg>
             </a>
-            <a href="/cv.pdf" target="_blank" class="external-link">
+
+            <!-- External link to LinkedIn profile -->
+            <a href="https://www.linkedin.com/in/kulan-gun/" target="_blank" class="external-link">
+                LinkedIn
+                <!-- SVG icon for external link -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+            <!-- External link to CV/resume -->
+            <a href="https://read.cv/kulan.gun" target="_blank" class="external-link">
                 CV
+                <!-- SVG icon for external link -->
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M7 17L17 7M17 7H7M17 7V17"/>
                 </svg>
@@ -54,7 +71,7 @@
         <aside class="vertical-nav">
             <a href="javascript:history.back()" class="back-button">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
                 </svg>
                 Back
             </a>
@@ -78,7 +95,7 @@
                     <h1>Designing the future of contactless travel</h1>
                     <p class="case-study-subtitle">
                         <span class="year">Year: 2024 |</span>
-                        <span class="duration">Duration: 9+ months |</span>
+                        <span class="duration">Duration: 11+ months |</span>
                         <span class="role">Role: Senior UX Designer</span>
                     </p>
                 </header>
@@ -86,76 +103,120 @@
                 <section id="overview">
                     <h2>Overview</h2>
                     <div class="divider" aria-hidden="true"></div>
-                    <p>This is a work in progress. Please come back later.</p>
+                    <p>A UK public-sector organisation needed to enhance its high-transaction digital immigration
+                        service, ensuring it met the needs of diverse global users.</p>
+                    <p>Our team led the user-centred design (UCD) process, developing an innovative omni-channel
+                        prototyping approach that combined a Figma mobile prototype with a Heroku-hosted GOV.UK service
+                        prototype. This enabled robust usability testing across multiple demographics, including
+                        different digital literacy levels, age groups, and nationalities.</p>
+                    <p>Through this work, we successfully achieved a first-time GDS assessment pass, moving the service
+                        to public Beta and supporting 5+ million users worldwide.</p>
                 </section>
 
                 <section id="problem">
                     <h2>Problem</h2>
                     <div class="divider" aria-hidden="true"></div>
-                    <p>This is a work in progress. Please come back later.</p>
+                    <p>Users needed a seamless way to prove their immigration status digitally, replacing traditional
+                        physical documents like BRP cards. However, key challenges included:</p>
+                    <ul>
+                        <li>Users with limited digital skills struggled with verification.</li>
+                        <li>Inaccessible content due to complex terminology and acronyms.</li>
+                        <li>Technology failures leaving users unable to prove their status.</li>
+                        <li>Users without identity documents facing barriers to account setup.</li>
+                    </ul>
+                    <p>Additionally, the service needed to respond rapidly to policy shifts, such as BRP cards expiring
+                        in 2024, while ensuring compliance with accessibility standards.</p>
                 </section>
 
                 <section id="solution">
                     <h2>Solution</h2>
                     <div class="divider" aria-hidden="true"></div>
-                    <p>This is a work in progress. Please come back later.</p>
-                    <!-- <ul>
-                        <li>An intuitive, step-by-step application wizard</li>
-                        <li>Real-time application status tracking</li>
-                        <li>Automated eligibility checks to reduce processing times</li>
-                        <li>A secure document upload system</li>
-                        <li>Integration with existing government databases for faster verification</li>
-                    </ul> -->
+                    <p>Our approach combined rapid prototyping, usability testing, and policy collaboration to create an
+                        inclusive digital service:</p>
+                    <ul>
+                        <li>Developed a hybrid prototyping method integrating a Figma mobile app with a GOV.UK Heroku
+                            prototype to simulate an omni-channel experience.</li>
+                        <li>Tested the service with diverse users across multiple countries, ensuring accessibility for
+                            different age groups, digital literacy levels, and technical constraints.</li>
+                        <li>Streamlined content and simplified complex terminology to improve comprehension,
+                            particularly for users with limited English skills.
+                        </li>
+                        <li>Introduced alternative verification routes, allowing users without identity documents to
+                            register through a ‘No ID’ account journey.
+                        </li>
+                        <li>Implemented assisted digital support through partnerships with community organisations and
+                            live webchat services for users needing extra help.
+                        </li>
+                    </ul>
                 </section>
 
                 <section id="process">
                     <h2>Process</h2>
                     <div class="divider" aria-hidden="true"></div>
-                    <p>This is a work in progress. Please come back later.</p>
-                    <!-- <ol>
-                        <li>User Research: Conducted interviews and surveys with benefit applicants and staff.</li>
-                        <li>System Analysis: Evaluated the existing infrastructure and identified bottlenecks.</li>
-                        <li>Prototyping: Developed low and high-fidelity prototypes of the new system.</li>
-                        <li>User Testing: Iteratively tested and refined the design with real users.</li>
-                        <li>Development: Worked closely with developers to implement the new system.</li>
-                        <li>Training: Prepared staff for the new system and created user guides.</li>
-                    </ol> -->
+                    <ol>
+                        <li>User research: Conducted usability testing with international users to understand barriers
+                            to proving their immigration status. Engaged with community organisations to assess assisted
+                            digital needs.</li>
+                        <li>Prototyping and iteration: Designed and iterated on Figma-based mobile flows for app
+                            interactions. Developed a Heroku-hosted GOV.UK prototype for service testing. Ensured
+                            realistic policy-driven testing scenarios, allowing adjustments based on government
+                            regulations.</li>
+                        <li>Accessibility and inclusion enhancements: Added a ‘skip face scan’ option for users with
+                            conditions like photo-sensitive epilepsy. Allowed expired immigration status evidence to be
+                            used for up to 18 months to prevent legal uncertainty due to technical failures.
+
+                        </li>
+                        <li>Collaboration and policy alignment: Worked closely with policy teams, business ops, product
+                            owners, analysts, and developers to align service design with government legislation and
+                            operational feasibility.</li>
+                    </ol>
                 </section>
 
                 <section id="results">
                     <h2>Results</h2>
                     <div class="divider" aria-hidden="true"></div>
-                    <p>This is a work in progress. Please come back later.</p>
-                    <!-- <ul>
-                        <li>50% reduction in average application processing time</li>
-                        <li>30% decrease in customer support inquiries</li>
-                        <li>95% user satisfaction rate with the new application process</li>
-                        <li>40% increase in first-time successful applications</li>
-                    </ul> -->
+                    <p>We achieved a first-time GDS assessment pass, allowing the service to move to public Beta.</p>
+                    <ul>
+                        <li>5+ million users worldwide can now prove their immigration status digitally</li>
+                        <li>Simplified content and removal of complex acronyms through inclusive language design</li>
+                        <li>Assisted digital support for users who cannot access online services independently</li>
+                    </ul>
 
-                    <div class="inset-quote">
+                    <!-- <div class="inset-quote">
                         <blockquote>
                             "This is a work in progress. Please come back later."
                         </blockquote>
-                    </div>
+                    </div> -->
                 </section>
 
                 <section id="conclusion">
                     <h2>Conclusion</h2>
                     <div class="divider" aria-hidden="true"></div>
-                    <p>This is a work in progress. Please come back later.</p>
+                    <p>By adopting a user-centred, omni-channel design approach, we successfully improved the digital
+                        immigration status service, ensuring it works for all users, regardless of digital ability or
+                        access to technology.</p>
+                    <p>My hybrid Figma + GOV.UK prototyping method allowed rapid iteration, enabling the team to respond
+                        swiftly to policy shifts and real-world challenges.</p>
+                    <p>This approach not only improved usability but also set a precedent for future UK GOV digital
+                        transformation projects, proving the value of blending policy, technology, and user research to
+                        deliver accessible, inclusive services.</p>
                 </section>
 
                 <section id="next-steps">
-                    <h2>Next Steps</h2>
+                    <h2>Next steps</h2>
                     <div class="divider" aria-hidden="true"></div>
-                    <p>This is a work in progress. Please come back later.</p>
-                    <!-- <ul>
-                        <li>Expand the system to cover additional types of benefits</li>
-                        <li>Implement machine learning for more accurate eligibility predictions</li>
-                        <li>Develop a mobile app for even greater accessibility</li>
-                        <li>Conduct ongoing user research to continue improving the system</li>
-                    </ul> -->
+                    <ul>
+                        <li>Further enhancements to support ‘No ID’ users, including a video verification route for
+                            those unable to provide traditional identification.</li>
+                        <li>Grant funding for community organisations, allowing local groups to assist users with eVisa
+                            applications.</li>
+                        <li>Exploration of additional support models, such as expanding assisted digital webchat
+                            services and partnerships with trusted organisations to provide in-person verification
+                            support.
+                        </li>
+                    </ul>
+
+
                 </section>
             </article>
         </main>
@@ -163,41 +224,43 @@
 
     <script src="script.js"></script>
 
-        <!-- Add this at the end of your body tag, just before the closing </body> -->
-    
-        <footer class="footer">
-            <div class="divider"></div>
-            <div class="footer-content">
-              <div class="footer-section">
+    <!-- Add this at the end of your body tag, just before the closing </body> -->
+
+    <footer class="footer">
+        <div class="divider"></div>
+        <div class="footer-content">
+            <div class="footer-section">
                 <h3>MAIN</h3>
                 <nav>
-                  <a href="#work">Work</a>
-                  <a href="#info">Info</a>
+                    <a href="#work">Work</a>
+                    <a href="#info">Info</a>
                 </nav>
-              </div>
-              <div class="footer-section">
+            </div>
+            <div class="footer-section">
                 <h3>CONTACT</h3>
                 <nav>
-                  <a href="https://www.linkedin.com/in/kulan-gun/" target="_blank" rel="noopener noreferrer">
-                    LinkedIn
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                    </svg>
-                  </a>
-                  <a href="https://read.cv/kulan.gun" target="_blank">
-                    CV
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                    </svg>
-                  </a>
+                    <a href="https://www.linkedin.com/in/kulan-gun/" target="_blank" rel="noopener noreferrer">
+                        LinkedIn
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </a>
+                    <a href="https://read.cv/kulan.gun" target="_blank">
+                        CV
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </a>
                 </nav>
-              </div>
             </div>
-            <div class="copyright">
-              <p>© 2025 Kulan Gunawardena. All rights reserved.</p>
-            </div>
-          </footer>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Kulan Gunawardena. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
-</html>
 
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Handles encoding, preventing issues with displaying special characters -->
+    <meta charset="UTF-8">
+    <!-- Optimises the page for responsiveness, particularly on mobile devices. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Provides instructions to search engine bots about how to handle the page. -->
+    <!-- <meta name="robots" content="noindex, nofollow"> -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <title>Case Study | Anglian Water</title>
+    <!-- Link to the new CSS file for case study page styles -->
+    <link rel="stylesheet" href="styles/case-study.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <!-- Import the Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top navigation bar -->
+    <nav class="top-nav">
+        <!-- Left side of the navigation (logo) -->
+        <div class="nav-left">
+            <!-- Logo linking to the home page -->
+            <a href="index.html" class="logo" aria-label="Home">
+                <img src="images/logo.png" alt="KG Logo" loading="lazy">
+            </a>
+        </div>
+
+        <!-- Right side of the navigation (menu items) -->
+        <div class="nav-right">
+            <!-- Internal link to the Work section, marked as active -->
+            <a href="index.html" class="nav-link active" data-section="work">Work</a>
+            <!-- Internal link to the Info section -->
+            <!-- <a href="#" class="nav-link">Info</a> -->
+
+            <!-- External link to Credly profile -->
+            <a href="https://www.credly.com/users/kulan-gunawardena" target="_blank" class="external-link">
+                Credentials
+                <!-- SVG icon for external link -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+
+            <!-- External link to LinkedIn profile -->
+            <a href="https://www.linkedin.com/in/kulan-gun/" target="_blank" class="external-link">
+                LinkedIn
+                <!-- SVG icon for external link -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+            <!-- External link to CV/resume -->
+            <a href="https://read.cv/kulan.gun" target="_blank" class="external-link">
+                CV
+                <!-- SVG icon for external link -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+    <!-- Main content layout for case study -->
+    <div class="case-study-layout">
+        <aside class="vertical-nav">
+            <a href="javascript:history.back()" class="back-button">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                Back
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#overview" class="nav-item">Overview</a></li>
+                    <li><a href="#problem" class="nav-item">Problem</a></li>
+                    <li><a href="#solution" class="nav-item">Solution</a></li>
+                    <li><a href="#process" class="nav-item">Process</a></li>
+                    <li><a href="#results" class="nav-item">Results</a></li>
+                    <li><a href="#conclusion" class="nav-item">Conclusion</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div></div> <!-- This empty div creates the gap -->
+        <main class="case-study-content">
+            <article class="case-study-details">
+                <header>
+                    <p class="caption">2023 | ANGLIAN WATER</p>
+                    <h1>Modernising a payment tracking platform</h1>
+                    <p class="case-study-subtitle">
+                        <span class="year">Year: 2023 |</span>
+                        <span class="duration">Duration: 1 month |</span>
+                        <span class="role">Role: UX Design Lead</span>
+                    </p>
+                </header>
+
+                <section id="overview">
+                    <h2>Overview</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                    <p>Anglian Water needed a modernised internal customer relationship management (CRM) system to monitor customer payments, streamline workflows, and improve data
+                        accuracy. </p>
+                    <p>As the lead UX designer, I guided the design, and prototyping process to create a more
+                        intuitive and scalable solution for their internal teams.</p>
+
+
+                    <img src="images/anglian.png" alt="Preview of the final design" loading="lazy">
+
+
+                </section>
+
+                <section id="problem">
+                    <h2>Problem</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                    <p>The legacy CRM system was inefficient, leading to slow task completion, data entry errors, and
+                        frustration among users.</p>
+                    <p>The interface was outdated, lacked consistency, and required excessive
+                        navigation, increasing cognitive load. Agents struggled to complete routine processes quickly,
+                        affecting productivity.</p>
+
+                    <img src="images/tallyman2.png" alt="The original system's design." class="rounded-image"
+                        loading="lazy">
+
+                </section>
+
+                <section id="solution">
+                    <h2>Solution</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                    <p>We designed a high-fidelity prototype that restructured workflows, improved information
+                        hierarchy, and enhanced usability.</p>
+                    <p>By leveraging Experian’s design system, we ensured
+                        scalability and consistency across the system. The redesigned interface minimised cognitive
+                        load, reduced errors, and optimised task efficiency.</p>
+
+                        <img src="images/tallyman-proto.png" alt="The original system's design." class="rounded-image"
+                        loading="lazy">
+
+                </section>
+
+                <section id="process">
+                    <h2>Process</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                    <ol>
+                        <li>User research: Conducted interviews and observations with CRM agents to understand pain
+                            points and inefficiencies.</li>
+                        <li>Wireframing & prototyping: Developed low-fidelity wireframes and iterated based on feedback
+                            before moving to high-fidelity designs.</li>
+                        <li>User testing: Conducted usability testing with agents to refine interactions, ensuring
+                            accessibility and ease of use.</li>
+                        <li>Development: Worked closely with developers to implement the new system.</li>
+                    </ol>
+
+                    <img src="images/tallyman3.png" alt="The original system's design." class="rounded-image"
+                        loading="lazy">
+
+                </section>
+
+                <section id="results">
+                    <h2>Results</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                    <ul>
+                        <li>Optimised workflows, reducing task completion time and improving data accuracy.</li>
+                        <li>Increased efficiency, allowing agents to complete key tasks with fewer clicks.</li>
+                        <li>Secured leadership approval, ensuring buy-in for system implementation.</li>
+                        <li>Seamless developer handover, enabling a smooth transition from prototype to build.</li>
+                    </ul>
+
+                    <div class="inset-quote">
+                        <blockquote>
+                            "You delivered on the brief, and my team and I are really impressed with the prototypes,
+                            along with your considerations for the build now and in the future." - Anglian Water
+                        </blockquote>
+                    </div>
+
+                </section>
+
+                <section id="conclusion">
+                    <h2>Conclusion</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                    <p>The redesigned CRM system addressed critical usability issues, improved data handling, and
+                        enhanced the user experience for internal teams.</p>
+                    <p>By focusing on efficiency, accessibility, and
+                        intuitive navigation, we created a system that better supported Anglian Water’s operational
+                        needs.</p>
+
+
+                    <img src="images/tallyman4.png" alt="A mock-up of the final design" loading="lazy">
+
+
+                </section>
+
+            </article>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Add this at the end of your body tag, just before the closing </body> -->
+
+    <footer class="footer">
+        <div class="divider"></div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MAIN</h3>
+                <nav>
+                    <a href="#work">Work</a>
+                    <a href="#info">Info</a>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3>CONTACT</h3>
+                <nav>
+                    <a href="https://www.linkedin.com/in/kulan-gun/" target="_blank" rel="noopener noreferrer">
+                        LinkedIn
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </a>
+                    <a href="https://read.cv/kulan.gun" target="_blank">
+                        CV
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Kulan Gunawardena. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
