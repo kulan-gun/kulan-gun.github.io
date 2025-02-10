@@ -58,14 +58,6 @@ img {
     border-radius: 8px; /* Rounded corners for the image */
 }
 
-/* Caption Styling */
-.single-column figcaption {
-    margin-top: 8px; /* Add spacing between image and caption */
-    font-size: 14px; /* Set font size for readability */
-    color: #BABABA; /* Light grey colour for the caption */
-    text-align: center; /* Centre-align the text */
-}
-
 .two-column {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Ensure equal-width columns for proper alignment */
