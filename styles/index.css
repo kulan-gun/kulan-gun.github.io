@@ -65,6 +65,29 @@
     animation: fadeInUp 0.8s ease-out; /* Apply fadeInUp animation with duration specified */
 }
 
+/* Styles for the "Selected Work" heading or h2 */
+h2 {
+    font-size: 2.25rem; /* Size between 4rem (hero h1) and 24px (card title). 2 rem = 32px */
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 2rem; /* Add some space below the heading */
+    text-align: left; /* Align with the case study cards */
+    animation: fadeInUp 0.8s ease-out; /* Apply fadeInUp animation with duration specified */
+}
+
+/* Visually hidden utility class */
+.visually-hidden {
+    position: absolute; /* Take the element out of the document flow */
+    width: 1px; /* Make it very small */
+    height: 1px;
+    padding: 0;
+    margin: -1px; /* Move it off-screen */
+    overflow: hidden; /* Hide any overflow */
+    clip: rect(0, 0, 0, 0); /* Clip the element to hide it */
+    white-space: nowrap; /* Prevent text from wrapping */
+    border: 0; /* Remove any borders */
+}
+
 /* Styles for the all caps captions above headers */
 .caption {
     color: var(--text-secondary);
@@ -73,16 +96,6 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     margin-bottom: 2px; /* Distance between caption and h2 */
-    animation: fadeInUp 0.8s ease-out; /* Apply fadeInUp animation with duration specified */
-}
-
-/* Styles for the "Selected Work" heading or h2 */
-.selected-work-heading {
-    font-size: 2.25rem; /* Size between 4rem (hero h1) and 24px (card title). 2 rem = 32px */
-    color: var(--text-primary);
-    font-weight: 600;
-    margin-bottom: 2rem; /* Add some space below the heading */
-    text-align: left; /* Align with the case study cards */
     animation: fadeInUp 0.8s ease-out; /* Apply fadeInUp animation with duration specified */
 }
 
@@ -427,7 +440,7 @@
         font-size: 14px;
     }
 
-    .selected-work-heading {
+    h2 {
         font-size: 1.75rem; /* Slightly smaller on tablets */
     }
 }
@@ -459,7 +472,7 @@
         font-size: 12px;
     }
 
-    .selected-work-heading {
+    h2 {
         font-size: 1.5rem; /* Slightly smaller on phones */
     }
 }

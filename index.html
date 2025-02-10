@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kulan - UX Designer</title>
-     <!-- Favicon -->
-     <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <!-- Link to the new CSS file for index page styles -->
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/footer.css">
@@ -14,6 +15,7 @@
     <!--Import the Fira Code font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Top navigation bar -->
     <nav class="top-nav">
@@ -28,33 +30,36 @@
         <!-- Right side of the navigation (menu items) -->
         <div class="nav-right">
             <!-- Internal link to the Work section, marked as active -->
-            <a href="index.html" class="nav-link active" data-section="work">Work</a>
+            <a href="index.html" class="nav-link active" data-section="work" aria-label="View my work">Work</a>
             <!-- Internal link to the Info section -->
             <!-- <a href="#" class="nav-link">Info</a> -->
 
             <!-- External link to Credly profile -->
             <a href="https://www.credly.com/users/kulan-gunawardena" target="_blank" class="external-link">
                 Credentials
+                <span class="visually-hidden">(opens in a new tab)</span>
                 <!-- SVG icon for external link -->
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
                 </svg>
             </a>
 
             <!-- External link to LinkedIn profile -->
             <a href="https://www.linkedin.com/in/kulan-gun/" target="_blank" class="external-link">
                 LinkedIn
+                <span class="visually-hidden">(opens in a new tab)</span>
                 <!-- SVG icon for external link -->
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
                 </svg>
             </a>
             <!-- External link to CV/resume -->
             <a href="https://read.cv/kulan.gun" target="_blank" class="external-link">
                 CV
+                <span class="visually-hidden">(opens in a new tab)</span>
                 <!-- SVG icon for external link -->
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
                 </svg>
             </a>
         </div>
@@ -64,20 +69,35 @@
     <main>
 
         <div class="hero">
-            <h1>Hi, I'm <span class="highlight">Kulan</span> <span class="wave">👋🏽</span></h1>
-            <p>I'm <span id="typing-animation"></span></p>
-        </div> 
+            <!-- Main heading -->
+            <h1>
+                Hi, I'm
+                <span class="highlight">Kulan</span> <!-- Highlighted name -->
+                <span class="wave" aria-hidden="true">👋🏽</span> <!-- Waving hand emoji, hidden from screen readers -->
+            </h1>
+
+            <!-- Paragraph with typing animation and visually hidden text -->
+            <p>
+                I'm
+                <span id="typing-animation" aria-hidden="true"></span>
+                <!-- Typing animation, hidden from screen readers -->
+                <span class="visually-hidden">a product designer</span> <!-- Visually hidden text for screen readers -->
+            </p>
+        </div>
 
         <!-- Work section, marked as active -->
         <section id="work" class="active">
             <p class="caption">EXPERIENCE</p>
-            <h2 class="selected-work-heading">My Work</h2>
+
+            <!-- Selected work heading-->
+            <h2>My Work</h2>
+
             <!-- Container for case study cards -->
             <div class="case-studies">
 
                 <!-- Case Study 1 -->
                 <!-- <a href="case-study.html" class="case-study-card" data-case-study="case-study.html"> -->
-                    <a href="case-study1.html" class="case-study-card">
+                <a href="case-study1.html" class="case-study-card">
                     <div class="card-content">
                         <div class="card-header">
                             <div class="card-text">
@@ -90,16 +110,17 @@
                                 </p> -->
                             </div>
                             <!-- Arrow icon -->
-                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
                             </svg>
                         </div>
                         <div class="card-image">
-                            <img src="images/trials2-min.jpeg" alt="Fingerprint Scanning App">
+                            <img src="images/trials2-min.jpeg" alt="Fingerprint scanning app">
                         </div>
                     </div>
                 </a>
-        
+
                 <!-- Case Study 2 -->
                 <a href="case-study2.html" class="case-study-card">
                     <div class="card-content">
@@ -114,26 +135,28 @@
                                 </p> -->
                             </div>
                             <!-- Arrow icon -->
-                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
                             </svg>
                         </div>
-                        <div class="card-image"> 
-                            <img src="images/dwp-work1.png" alt="AI Health Assistant Interface">
+                        <div class="card-image">
+                            <img src="images/dwp-work1.png" alt="GOV.UK's Send your fit note service">
                         </div>
                     </div>
                 </a>
-        
-                 <!-- Case Study 3 (Coming Soon) -->
-                 <div class="case-study-card coming-soon">
+
+                <!-- Case Study 3 (Coming Soon) -->
+                <div class="case-study-card coming-soon">
                     <div class="card-content">
                         <div class="card-header">
                             <div class="card-text">
                                 <p class="card-prefix">2024 | CAPGEMINI INVENT</p>
                                 <h2 class="card-title">Driving AI-empowered change</h2>
                             </div>
-                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
                             </svg>
                         </div>
                         <div class="card-image">
@@ -144,34 +167,35 @@
                         <span>Coming Soon</span>
                     </div>
                 </div>
-        
 
-                   <!-- Case Study 4 (Coming Soon) -->
-                   <a href="case-study4.html" class="case-study-card">
+
+                <!-- Case Study 4 (Coming Soon) -->
+                <a href="case-study4.html" class="case-study-card">
                     <div class="card-content">
                         <div class="card-header">
                             <div class="card-text">
                                 <p class="card-prefix">2023 | ANGLIAN WATER</p>
                                 <h2 class="card-title">Modernising an enterprise payment platform</h2>
-                                
+
                             </div>
                             <!-- Arrow icon -->
-                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
                             </svg>
                         </div>
                         <div class="card-image">
-                            <img src="images/anglian3-min.jpeg" alt="Enterprise Payment Platform Dashboard">
+                            <img src="images/anglian3-min.jpeg" alt="Enterprise payment platform dashboard">
                         </div>
                     </div>
                 </a>
-                
 
-                
+
+
 
             </div>
         </section>
-        
+
         <!-- Info section (empty for now) -->
         <section id="info">
             <!-- Info content will go here -->
@@ -182,50 +206,54 @@
     <script src="script.js"></script>
 
     <!-- Add this at the end of your body tag, just before the closing </body> -->
-    
+
     <footer class="footer">
         <div class="divider"></div>
         <div class="footer-content">
-          <div class="footer-section">
-            <h3>MAIN</h3>
-            <nav>
-              <a href="#work">Work</a>
-              <a href="https://www.credly.com/users/kulan-gunawardena" target="_blank" class="external-link">
-                Credentials
-                <!-- SVG icon for external link -->
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                </svg>
-            </a>
-              <!-- <a href="#info">Info</a> -->
-            </nav>
-          </div>
-          <div class="footer-section">
-            <h3>CONTACT</h3>
-            <nav>
-              <a href="https://www.linkedin.com/in/kulan-gun/" target="_blank" rel="noopener noreferrer" class="external-link">
-                LinkedIn
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                </svg>
-              </a>
-              <a href="https://read.cv/kulan.gun" target="_blank" class="external-link">
-                CV
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                </svg>
-              </a>
-            </nav>
-          </div>
+            <div class="footer-section">
+                <h3>MAIN</h3>
+                <nav>
+                    <a href="#work">Work</a>
+                    <a href="https://www.credly.com/users/kulan-gunawardena" target="_blank" class="external-link">
+                        Credentials
+                        <span class="visually-hidden">(opens in a new tab)</span>
+                        <!-- SVG icon for external link -->
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </a>
+                    <!-- <a href="#info">Info</a> -->
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h3>CONTACT</h3>
+                <nav>
+                    <a href="https://www.linkedin.com/in/kulan-gun/" target="_blank" rel="noopener noreferrer"
+                        class="external-link">
+                        LinkedIn
+                        <span class="visually-hidden">(opens in a new tab)</span>
+                        <!-- SVG icon for external link -->
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </a>
+                    <a href="https://read.cv/kulan.gun" target="_blank" class="external-link">
+                        CV
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                    </a>
+                </nav>
+            </div>
         </div>
         <div class="copyright">
-          <p>© 2025 Kulan Gunawardena. All rights reserved.</p>
+            <p>© 2025 Kulan Gunawardena. All rights reserved.</p>
         </div>
-      </footer>
+    </footer>
 
 </body>
+
 </html>
-
-
- 
-
