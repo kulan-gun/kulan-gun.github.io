@@ -260,7 +260,7 @@
 
 /* Styles for the top navigation bar */
 .top-nav {
-    position: fixed; /* Keep the nav bar fixed at the top of the screen */
+    position: fixed; /* Keep the nav bar fixed at the top of the screen, or static allows it to flow */
     top: 0;
     left: 0;
     right: 0;
@@ -269,7 +269,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 1000; /* Ensure nav stays on top of other elements */
-    /* background-color: var(--background); */
+    background-color: var(--background);
 }
 
 /* ========================
