@@ -175,3 +175,71 @@ body {
     z-index: 1000;
     /* background-color: var(--background); */
 }
+
+
+
+
+/* Light mode */
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    color: var(--text-primary);
+}
+
+/* Adjust other elements for light mode as needed */
+body.light-mode .case-study-details a {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+body.light-mode .inset-quote blockquote {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-left-color: #D1D5DB;
+    color: #4B5563;
+}
+
+/* Add more light mode adjustments for other elements as needed */
+
+/* In your global.css file */
+
+body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    background-image: var(--background-pattern);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+:root {
+    /* Dark mode variables */
+    --background: #121212;
+    --background-pattern: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='29' height='50.115' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%23121212ff'/><path d='M14.498 16.858L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z' stroke-width='1' stroke='%231c1c1eB3' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    /* Other dark mode variables... */
+}
+
+body.light-mode {
+    /* Light mode variables */
+    --background: #FFFFFF;
+    --background-pattern: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='29' height='50.115' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%23FFFFFFff'/><path d='M14.498 16.858L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z' stroke-width='1' stroke='%23E0E0E0B3' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    /* Other light mode variables... */
+    --card-background: #F0F0F0;
+    --text-primary: #333333;
+    --text-body: #4A4A4A;
+    --text-secondary: #666666;
+    --nav-pill-bg: rgba(0, 0, 0, 0.1);
+    --accent-color: #3a86ff;
+    --focus-color: #2563eb;
+    --divider-color: #E0E0E0;
+    --top-nav-background: rgba(255, 255, 255, 0.8); /* Semi-transparent light background */
+}
+
+

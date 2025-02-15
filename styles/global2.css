@@ -1,0 +1,257 @@
+/* Global CSS for UX Portfolio */
+
+/* ==========================================
+   Colours and Default Styles
+   ========================================== */
+
+/* Global CSS for UX Portfolio */
+
+/* ==========================================
+   Colours and Default Styles
+   ========================================== */
+
+/* CSS Custom Properties (variables) for consistent theming */
+:root {
+    --background: #121212;
+    /* Dark background color for the whole site */
+    --card-background: #1c1c1e;
+    /* Slightly lighter background color for cards */
+    --text-primary: #f5f5f5;
+    /* Main text color for headers (white - F5F5F5) */
+    --text-body: #d1d1d1;
+    /* New softer grey for body text and lists */
+    --text-secondary: #bababa;
+    /* Lighter gray for secondary text */
+    --nav-pill-bg: rgba(255, 255, 255, 0.1);
+    /* Background color for navigation pills */
+    --accent-color: #62b0ff;
+    /* Bright color for highlights or important elements, formerly #3a86ff */
+    --focus-color: #4d90fe;
+    /* A bright blue for focus indicators */
+    --divider-color: #333333;
+    /* Color for divider lines */
+    --background-pattern: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='29' height='50.115' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%23121212ff'/><path d='M14.498 16.858L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z' stroke-width='1' stroke='%231c1c1eB3' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    --top-nav-background: rgba(18, 18, 18, 0.8);
+  }
+  
+  /* Reset default styles and apply box-sizing to all elements */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Enable smooth scrolling for the entire page */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Base styles for the body */
+  body {
+    background-color: var(--background);
+    background-image: var(--background-pattern);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    color: var(--text-primary);
+    font-family: "Inter", sans-serif;
+    /* Use Inter as the primary font */
+    min-height: 100vh;
+    /* Ensure the body is at least as tall as the viewport */
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  
+  /* ==========================================
+     Navigation
+     ========================================== */
+  
+  /* Styles for the top navigation bar */
+  .top-nav {
+    position: fixed;
+    /* Keep the nav bar fixed at the top of the screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    /* Ensure nav stays on top of other elements */
+    background-color: var(--top-nav-background);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .top-nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--background-pattern);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.3;
+  }
+  
+  /* Styles for the logo in the navigation */
+  .nav-left .logo {
+    display: block;
+    text-decoration: none;
+  }
+  
+  .nav-left .logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+  
+  /* Styles for the right side of the navigation (links) */
+  .nav-right {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  
+  /* Styles for navigation links and external links */
+  .nav-link,
+  .external-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-link:hover,
+  .external-link:hover,
+  .nav-link.active {
+    color: var(--text-primary);
+  }
+  
+  /* ==========================================
+     External Link Styles
+     ========================================== */
+  
+  /* Additional styles for external links (with icons) */
+  .external-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .external-link svg {
+    transition: transform 0.2s ease;
+  }
+  
+  .external-link:hover svg {
+    transform: translate(2px, -2px);
+    /* Move icon slightly on hover */
+  }
+  
+  /* ==========================================
+     Main Styles
+     ========================================== */
+  
+  /* Styles for the main content area */
+  main {
+    padding-top: 100px;
+    /* Add space for the fixed navigation */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  
+  /* Add specific rules for case study page */
+  .case-study-layout main.case-study-content {
+    padding: 0;
+    /* Remove unnecessary padding */
+    margin: 0;
+    /* Align it with grid */
+    max-width: none;
+    /* Allow it to use grid-defined width */
+  }
+  
+  /* Focus styles for interactive elements */
+  .nav-link:focus,
+  .external-link:focus,
+  .nav-item:focus,
+  .case-study-card:focus {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 2px;
+  }
+  
+  /* Media query for tablets and smaller screens */
+  @media (max-width: 768px) {
+    .top-nav {
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+    }
+  
+    .nav-right {
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 480px) {
+    main {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+  
+  /* Light mode */
+  
+  #theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  #theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    color: var(--text-primary);
+  }
+  
+  /* Adjust other elements for light mode as needed */
+  body.light-mode .case-study-details a {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+  }
+  
+  body.light-mode .inset-quote blockquote {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-left-color: #d1d5db;
+    color: #4b5563;
+  }
+  
+  /* Add more light mode adjustments for other elements as needed */
+  
+  /* Light mode variables */
+  body.light-mode {
+    --background: #ffffff;
+    --card-background: #f0f0f0;
+    --text-primary: #333333;
+    --text-body: #4a4a4a;
+    --text-secondary: #666666;
+    --nav-pill-bg: rgba(0, 0, 0, 0.1);
+    --accent-color: #3a86ff;
+    --focus-color: #2563eb;
+    --divider-color: #e0e0e0;
+    --background-pattern: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='29' height='50.115' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%23FFFFFFff'/><path d='M14.498 16.858L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z' stroke-width='1' stroke='%23E0E0E0B3' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    --top-nav-background: rgba(255, 255, 255, 0.8);
+  }
+  
+  
