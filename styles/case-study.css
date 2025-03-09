@@ -51,7 +51,7 @@
 
 /* Generic styling for all rounded images */
 .rounded-image {
-    width: 80%; /* Default size (adjustable in HTML if needed) */
+    width: 90%; /* Default size (adjustable in HTML if needed) */
     border-radius: 12px; /* Softly rounded edges */
     display: block; /* Ensures proper alignment */
     max-width: 100%; /* Prevents images from overflowing */
